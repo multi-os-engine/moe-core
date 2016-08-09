@@ -1,18 +1,19 @@
 /*
-Copyright 2014-2016 Intel Corporation
+ * Copyright (c) 2014-2016, Intel Corporation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-*/
 
 // ------------------------------ Init ------------------------------ //
 
@@ -79,132 +80,6 @@ tasks.generateConscryptFiles.outputs.files file('build/conscryptgen/NativeConsta
 tasks.generateConscryptFiles.dependsOn(tasks.buildConscryptGenerator)
 
 
-// ------------------------------ SPrep Generation ------------------------------ //
-
-task buildSPrepGenerator << {
-    ByteArrayOutputStream ostream = new ByteArrayOutputStream();
-    try {
-        exec {
-            executable = "xcodebuild"
-
-            args "-project", file("../moe.ios.core.native/android.external.icu/android.external.icu.xcodeproj").absolutePath
-            args "-target", "gensprep"
-            args "-configuration", "Release"
-
-            setErrorOutput(ostream)
-            setStandardOutput(ostream)
-        }
-    } catch(Exception ex) {
-        throw new GradleScriptException("xcodebuild failed with: ${ostream}", ex);
-    }
-}
-
-def sprepExecInput = file("../moe.ios.core.native/android.external.icu/build/xcode/Release/gensprep")
-def sprepInput = file("${android_path}/external/icu/icu4c/source/data/sprep").listFiles().findAll{ it.name.endsWith('.txt') }
-def icuBaseOutput = file("build/icugen")
-def icuOutput = new File(icuBaseOutput, "android/icu/impl/data/icudt56b")
-
-task generateSPrepFiles << {
-	mkdir(icuOutput)
-
-    for (f in sprepInput) {
-        def log = new ByteArrayOutputStream();
-        try {
-            exec {
-                commandLine sprepExecInput
-
-                args '-i', "${android_path}/external/icu/icu4c/source/stubdata"
-                args '-d', icuOutput
-                args '-u', '3.2.0'
-                args '-m', "${android_path}/external/icu/icu4c/source/data/unidata"
-                args '-b', f.name.split('\\.')[0..-2].join('.')
-                args '-s', f.parent
-                args f.name
-
-                setErrorOutput(log)
-                setStandardOutput(log)
-            }
-        } catch (Exception ex) {
-            throw new GradleException("Could not generate spp file from ${f.absolutePath}: " + log.toString(), ex)
-        }
-    }
-}
-
-tasks.generateSPrepFiles.inputs.files sprepExecInput
-tasks.generateSPrepFiles.inputs.files sprepInput
-tasks.generateSPrepFiles.outputs.files sprepInput.collect {new File(file(icuOutput), it.name.split('\\.')[0..-2].join('.') + ".spp")}
-tasks.generateSPrepFiles.dependsOn(tasks.buildSPrepGenerator)
-
-
-// ------------------------------ Confusables Generation ------------------------------ //
-
-task buildCFUGenerator << {
-    ByteArrayOutputStream ostream = new ByteArrayOutputStream();
-    try {
-        exec {
-            executable = "xcodebuild"
-
-            args "-project", file("../moe.ios.core.native/android.external.icu/android.external.icu.xcodeproj").absolutePath
-            args "-target", "gencfu"
-            args "-configuration", "Release"
-
-            setErrorOutput(ostream)
-            setStandardOutput(ostream)
-        }
-    } catch(Exception ex) {
-        throw new GradleScriptException("xcodebuild failed with: ${ostream}", ex);
-    }
-}
-
-def cfuExecInput = file("../moe.ios.core.native/android.external.icu/build/xcode/Release/gencfu")
-def cfuRuleInput = file("${android_path}/external/icu/icu4c/source/data/unidata/confusables.txt")
-def cfuScriptInput = file("${android_path}/external/icu/icu4c/source/data/unidata/confusablesWholeScript.txt")
-
-task generateCFUFile << {
-	mkdir(icuOutput)
-
-    def log = new ByteArrayOutputStream();
-    try {
-        exec {
-            commandLine cfuExecInput
-
-            args '-i', "${android_path}/external/icu/icu4c/source/stubdata"
-            args '-r', cfuRuleInput.absolutePath
-            args '-w', cfuScriptInput.absolutePath
-            args '-d', icuOutput
-            args '-o', outputs.files[0].name
-
-            setErrorOutput(log)
-            setStandardOutput(log)
-        }
-    } catch (Exception ex) {
-        throw new GradleException("Could not generate cfu file: " + log.toString(), ex)
-    }
-}
-
-tasks.generateCFUFile.inputs.files cfuExecInput
-tasks.generateCFUFile.inputs.files cfuRuleInput
-tasks.generateCFUFile.inputs.files cfuScriptInput
-tasks.generateCFUFile.outputs.files new File(file(icuOutput), "confusables.cfu")
-tasks.generateCFUFile.dependsOn(tasks.buildCFUGenerator)
-
-
-// ------------------------------ ICU Data File Generation ------------------------------ //
-
-task copyICUDataFiles(type: Copy, dependsOn:[generateSPrepFiles,generateCFUFile]) {
-	from (file("${android_path}/external/icu/icu4c/source/data/in/coll/ucadata-implicithan.icu")) {
-		into 'coll'
-		rename { it.replace("-implicithan", "") }
-	}
-
-	file("${android_path}/external/icu/icu4c/source/data/in").listFiles().findAll { it.isFile() }.each {
-		from it
-	}
-
-	into icuOutput
-}
-
-
 // ------------------------------ Misc ------------------------------ //
 
 def android_java_sources = [
@@ -221,14 +96,11 @@ def android_java_sources = [
 	"${android_path}/libcore/dex/src/main/java",
 	"${android_path}/libcore/libart/src/main/java",
 	"${android_path}/libcore/luni/src/main/java",
+	"${android_path}/libcore/ojluni/src/main/java",
+	"${android_path}/libcore/ojluni/src_windows/main/java", // TODO: Should we include Java implementations for every platform?
 	"${android_path}/libcore/xml/src/main/java",
-        "${android_path}/libcore/json/src/main/java",
-	"${android_path}/external/icu/icu4j/main/classes/translit/src",
-	"${android_path}/external/icu/icu4j/main/classes/core/src",
-	"${android_path}/external/icu/icu4j/main/classes/collate/src",
+	"${android_path}/external/icu/android_icu4j/src/main/java",
 	tasks.generateConscryptFiles.outputs.files[0].parentFile.absolutePath,
-	icuBaseOutput.absolutePath,
-    "${android_path}/frameworks/base/core/java",
 ]
 
 sourceSets {
@@ -243,6 +115,14 @@ sourceSets {
         }
     }
 
+    currencyRes {
+	 	resources {
+	    	srcDir "${android_path}/libcore/ojluni"
+	    	include 'currency.data'
+	  	}
+	}
+
+
     core {
     	java {
     		srcDirs = android_java_sources
@@ -251,7 +131,11 @@ sourceSets {
 			}
 		}
 		resources {
-			srcDirs = java.srcDirs
+			srcDirs = java.srcDirs + "${android_path}/libcore/ojluni/src/main/resources"
+			srcDir currencyRes.resources
+			exclude {
+				it.file.absolutePath.endsWith('okhttp/src/main/java/com/squareup/okhttp/internal/Platform.java')
+			}
 		}
     }
 
@@ -262,10 +146,9 @@ sourceSets {
     junit {}
 }
 
-project.getTasks().getByName("compileCoreJava").sourceCompatibility = "1.7"
-project.getTasks().getByName("compileCoreJava").targetCompatibility = "1.7"
+project.getTasks().getByName("compileCoreJava").sourceCompatibility = "1.8"
+project.getTasks().getByName("compileCoreJava").targetCompatibility = "1.8"
 project.getTasks().getByName("compileCoreJava").dependsOn(tasks.generateConscryptFiles)
-project.getTasks().getByName("compileCoreJava").dependsOn(tasks.copyICUDataFiles)
 
 configurations {
 	jarjarJar {}
@@ -274,27 +157,38 @@ configurations {
 }
 
 dependencies {
-
-	String customRepo = System.getenv("MOE_MAVEN_ADDR")
-	if ((customRepo == null) || (customRepo.length() == 0)) {
-		customRepo = System.getenv("MOE_HOME")
-	}
-	if ((customRepo != null) && (customRepo.length() > 0)) {
-		repositories {
-			maven {
-				url(customRepo)
-			}
-		}
-	} else {
-		println "MOE_MAVEN_ADDR variable was not set!"
-	}
-
+    int repoIdx = 1;
+    while (true) {
+        String customRepo = System.getenv("MOE_PRIVATE_MAVEN_ADDR_$repoIdx")
+        if (customRepo == null || customRepo.length() == 0) {
+            break
+        }
+        repositories {
+            maven {
+                url(customRepo)
+                String privateRepoUser = System.getenv("MOE_PRIVATE_MAVEN_USER_$repoIdx")
+                if (privateRepoUser != null && privateRepoUser.length() > 0) {
+                    credentials {
+                        username = privateRepoUser
+                        password = System.getenv("MOE_PRIVATE_MAVEN_PASS_$repoIdx")
+                    }
+                }
+            }
+        }
+        ++repoIdx
+    }
     repositories {
+		if (project.hasProperty("moe.natj.repo")) {
+    		maven {
+        		url project.property("moe.natj.repo")
+    		}
+		} else {
+			mavenLocal()
+		}
         mavenCentral()
     }
-
     checkstyle 'com.puppycrawl.tools:checkstyle:6.1.1'
-    jarjarJar 'com.googlecode.jarjar:jarjar:1.3'
+    jarjarJar 'org.pantsbuild:jarjar:1.6.3'
 
     compile 'org.moe:natj-api:1.0.+'
 
@@ -368,21 +262,37 @@ task natjSphinxJar(type: Zip, dependsOn: sphinxNatJSources) {
 
 // ------------------------------ Core Jar Generation ------------------------------ //
 
+def jarjarJars = [
+	configurations.jarjarJar.files[0],
+	project.file('tools/asm-5.1.jar'),
+	project.file('tools/asm-commons-5.1.jar')
+]
+
 task jarjaredCoreBaseJar(dependsOn: compileCoreJava) {
+    def prebuilts = [file("${android_path}/external/icu/icu4j/main/shared/data/icudata.jar"),
+                     file("${android_path}/external/icu/icu4j/main/shared/data/icutzdata.jar")]
+
+    inputs.files jarjarJars
 	inputs.files sourceSets.core.output
+    inputs.files prebuilts
 	outputs.files "build/libs/core/jarjared.jar"
 
 	doLast {
 		ant {
 			taskdef(
 				name: 'jarjar',
-				classname: 'com.tonicsystems.jarjar.JarJarTask',
-				classpath: configurations.jarjarJar.files[0]
+				classname: 'org.pantsbuild.jarjar.JarJarTask',
+				classpath: jarjarJars.join(':')
 			)
 			jarjar(jarfile: outputs.files[0]) {
 				sourceSets.core.output.each {
 					fileset(dir: it)
 				}
+
+                prebuilts.each {
+                    zipfileset(src: it)
+                }
+
 				rule(pattern: 'com.squareup.**', result: 'com.android.@1')
 				rule(pattern: 'org.conscrypt.**', result: 'com.android.org.conscrypt.@1')
 				rule(pattern: 'org.bouncycastle.**', result: 'com.android.org.bouncycastle.@1')
@@ -416,12 +326,9 @@ task coreSourcesJar(type: Jar, dependsOn: compileCoreJava) {
 }
 
 
-def javaDocTitle = "moe.ios.core API"
 // ------------------------------ Core Javadoc Jar Generation ------------------------------ //
 
-
 task coreJavadoc(type: Javadoc) {
-	title = javaDocTitle
 	source sourceSets.core.allJava
 	destinationDir = file('build/docs/coreJavadoc')
 	include "**/*.java"
@@ -472,7 +379,6 @@ task iosSourcesJar(type: Jar, dependsOn: iosJar) {
 // ------------------------------ iOS Javadoc Jar Generation ------------------------------ //
 
 task iosJavadoc(type: Javadoc) {
-	title = javaDocTitle
 	source sourceSets.main.allJava
 	source configurations.natjSources.collect { zipTree(it) }
 	destinationDir = file('build/docs/iosJavadoc')
@@ -523,7 +429,6 @@ task junitSourcesJar(type: Jar, dependsOn: junitJar) {
 // ------------------------------ jUnit Javadoc Jar Generation ------------------------------ //
 
 task junitJavadoc(type: Javadoc, dependsOn: iosJar) {
-	title = javaDocTitle
 	source sourceSets.test.allJava
 	source configurations.testSources.collect { zipTree(it) }
 	classpath = iosJar.outputs.files

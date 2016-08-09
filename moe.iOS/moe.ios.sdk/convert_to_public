@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Copyright (C) 2014 Intel Corporation
+# Copyright (c) 2014-2016, Intel Corporation
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -42,9 +42,9 @@ if [ -f "main/java/moe-ios-sources.jar" ]; then
 fi
 
 mkdir -p main/native/Release-iphoneos
-cp -R "$PRIVATE_SDK/main/native/Release-iphoneos/moeSDK.framework" ./main/native/Release-iphoneos
+cp -R "$PRIVATE_SDK/main/native/Release-iphoneos/MOESDK.framework" ./main/native/Release-iphoneos
 mkdir -p main/native/Release-iphonesimulator
-cp -R "$PRIVATE_SDK/main/native/Release-iphonesimulator/moeSDK.framework" ./main/native/Release-iphonesimulator
+cp -R "$PRIVATE_SDK/main/native/Release-iphonesimulator/MOESDK.framework" ./main/native/Release-iphonesimulator
 
 mkdir -p platform-tools
 cp "$PRIVATE_SDK/platform-tools/dex2oat" ./platform-tools/dex2oat

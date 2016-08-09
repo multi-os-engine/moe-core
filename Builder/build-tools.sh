@@ -43,7 +43,7 @@ call_sub ../../tools/moe.ios.simulator.launcher moe-ios-simulator-launcher-build
 call_sub ../../tools/moe.build.gradle moe-build-gradle-build.sh &&
 call_sub ../../tools/moe.executable.builder moe-executable-builder-build.sh &&
 call_sub ../../tools/moe.ui.transformer moe-tools-ui-transformer.sh &&
-#call_sub ../../tools/moe.ui.designer moe-tools-ui-designer.sh &&
+# call_sub ../../tools/moe.ui.designer moe-tools-ui-designer.sh &&
 call_sub ../../tools/moe.plugin.idea moe-plugin-idea-build.sh
+:
 exit $?
-

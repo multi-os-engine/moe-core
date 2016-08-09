@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2343EF281899955A00B7E19E /* JniInvocation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D94FE60E183AA54200589FCA /* JniInvocation.cpp */; };
+		8B553A901C3BD85C00FB980A /* AsynchronousCloseMonitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B553A8F1C3BD85C00FB980A /* AsynchronousCloseMonitor.cpp */; };
 		D94FE61E183AA54200589FCA /* JniConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D94FE60C183AA54200589FCA /* JniConstants.cpp */; };
 		D94FE61F183AA54200589FCA /* JNIHelp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D94FE60D183AA54200589FCA /* JNIHelp.cpp */; };
 		D94FE621183AA54200589FCA /* toStringArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D94FE60F183AA54200589FCA /* toStringArray.cpp */; };
@@ -31,6 +32,8 @@
 		2384547D19E2C77E000DFC86 /* toStringArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = toStringArray.h; sourceTree = "<group>"; };
 		2395DA6E1877109700950DD5 /* MOE-Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MOE-Common.h"; sourceTree = "<group>"; };
 		23A22F70187594F00060BF79 /* MOE-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MOE-Prefix.pch"; sourceTree = "<group>"; };
+		8B553A8F1C3BD85C00FB980A /* AsynchronousCloseMonitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AsynchronousCloseMonitor.cpp; sourceTree = "<group>"; };
+		8B553A911C3BD86700FB980A /* AsynchronousCloseMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsynchronousCloseMonitor.h; sourceTree = "<group>"; };
 		D94FE60C183AA54200589FCA /* JniConstants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JniConstants.cpp; sourceTree = "<group>"; };
 		D94FE60D183AA54200589FCA /* JNIHelp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JNIHelp.cpp; sourceTree = "<group>"; };
 		D94FE60E183AA54200589FCA /* JniInvocation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JniInvocation.cpp; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 				D94FE60D183AA54200589FCA /* JNIHelp.cpp */,
 				D94FE60E183AA54200589FCA /* JniInvocation.cpp */,
 				D94FE60F183AA54200589FCA /* toStringArray.cpp */,
+				8B553A8F1C3BD85C00FB980A /* AsynchronousCloseMonitor.cpp */,
 			);
 			path = libnativehelper;
 			sourceTree = "<group>";
@@ -100,6 +104,7 @@
 		2384547019E2C77E000DFC86 /* nativehelper */ = {
 			isa = PBXGroup;
 			children = (
+				8B553A911C3BD86700FB980A /* AsynchronousCloseMonitor.h */,
 				2384547119E2C77E000DFC86 /* JNIHelp.h */,
 				2384547219E2C77E000DFC86 /* JniConstants.h */,
 				2384547319E2C77E000DFC86 /* JniInvocation.h */,
@@ -176,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B553A901C3BD85C00FB980A /* AsynchronousCloseMonitor.cpp in Sources */,
 				D94FE61F183AA54200589FCA /* JNIHelp.cpp in Sources */,
 				2343EF281899955A00B7E19E /* JniInvocation.cpp in Sources */,
 				D94FE61E183AA54200589FCA /* JniConstants.cpp in Sources */,
@@ -190,7 +196,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
@@ -228,7 +233,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				DEAD_CODE_STRIPPING = YES;
@@ -265,7 +269,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -281,11 +284,11 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/../moe.base/src/main/native/MOE-Prefix.pch";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				HEADER_SEARCH_PATHS = "\"$(ANDROID_ROOT)/system/core/include\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../aosp/system/core/include\"";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "\"$(ANDROID_ROOT)/libnativehelper/include/nativehelper\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../aosp/libnativehelper/include/nativehelper\" \"$(SRCROOT)/../../../../../aosp/libcore/include\"";
 			};
 			name = Debug;
 		};
@@ -293,7 +296,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -307,11 +309,11 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/../moe.base/src/main/native/MOE-Prefix.pch";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				HEADER_SEARCH_PATHS = "\"$(ANDROID_ROOT)/system/core/include\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../aosp/system/core/include\"";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "\"$(ANDROID_ROOT)/libnativehelper/include/nativehelper\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../aosp/libnativehelper/include/nativehelper\" \"$(SRCROOT)/../../../../../aosp/libcore/include\"";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

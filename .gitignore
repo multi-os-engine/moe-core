@@ -2,3 +2,11 @@ Builder/source
 moe.iOS/moe.ios.core.native/android.art.dalvikvm/_build
 moe.iOS/moe.ios.core.native/android.art.dex2oat/_build
 *.xcscmblueprint
+cfg-trim/cfg-trim.xcodeproj/xcuserdata
+cfg-trim/cfg-trim.xcodeproj/project.xcworkspace/xcuserdata
+build_windows
+CMakeGen/bin
+moe.iOS/moe.ios.core.native/moe.sdk/Debug
+moe.iOS/moe.ios.core.native/moe.sdk/Release
+wclang/wclang.xcodeproj/project.xcworkspace/xcuserdata
+wclang/wclang.xcodeproj/xcuserdata

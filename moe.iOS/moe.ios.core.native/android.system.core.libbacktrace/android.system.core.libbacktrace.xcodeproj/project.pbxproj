@@ -176,7 +176,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -215,7 +214,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -256,9 +254,9 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/../moe.base/src/main/native/MOE-Prefix.pch";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"\"$(ANDROID_ROOT)/system/core/include\"",
-					"\"$(ANDROID_ROOT)/system/core/base/include\"",
-					"\"$(ANDROID_ROOT)/libnativehelper/include/nativehelper\"",
+					"\"$(SRCROOT)/../../../../../aosp/system/core/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/system/core/base/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/libnativehelper/include/nativehelper\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -269,9 +267,9 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = "$(SRCROOT)/../moe.base/src/main/native/MOE-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"\"$(ANDROID_ROOT)/system/core/include\"",
-					"\"$(ANDROID_ROOT)/system/core/base/include\"",
-					"\"$(ANDROID_ROOT)/libnativehelper/include/nativehelper\"",
+					"\"$(SRCROOT)/../../../../../aosp/system/core/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/system/core/base/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/libnativehelper/include/nativehelper\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

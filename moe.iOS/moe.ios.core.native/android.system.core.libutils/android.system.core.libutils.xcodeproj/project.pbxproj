@@ -8,18 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		23F4C1E218CDD0CF00EF5181 /* FileMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23F4C1C818CDD0CF00EF5181 /* FileMap.cpp */; };
-		570D702E1C04983F00F32C83 /* SharedBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 570D702D1C04983F00F32C83 /* SharedBuffer.cpp */; };
-		570D70301C04988A00F32C83 /* SystemClock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 570D702F1C04988A00F32C83 /* SystemClock.cpp */; };
-		570D70381C04A73A00F32C83 /* RefBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 570D70371C04A73A00F32C83 /* RefBase.cpp */; };
-		570D703A1C04A74D00F32C83 /* Threads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 570D70391C04A74D00F32C83 /* Threads.cpp */; };
-		570D703D1C04B12D00F32C83 /* String8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 570D703B1C04B12D00F32C83 /* String8.cpp */; };
-		570D703E1C04B12D00F32C83 /* String16.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 570D703C1C04B12D00F32C83 /* String16.cpp */; };
-		570D70401C04B1A700F32C83 /* Unicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 570D703F1C04B1A700F32C83 /* Unicode.cpp */; };
-		570D70421C04B29900F32C83 /* Timers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 570D70411C04B29900F32C83 /* Timers.cpp */; };
-		570D70441C04B54600F32C83 /* Looper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 570D70431C04B54600F32C83 /* Looper.cpp */; };
-		570D70461C04B6B400F32C83 /* Static.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 570D70451C04B6B400F32C83 /* Static.cpp */; };
-		57AFF93B1C087A6600A5CBCF /* misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57AFF9391C087A6600A5CBCF /* misc.cpp */; };
-		57AFF93C1C087A6600A5CBCF /* VectorImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57AFF93A1C087A6600A5CBCF /* VectorImpl.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,18 +17,6 @@
 		23A22F70187594F00060BF79 /* MOE-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MOE-Prefix.pch"; sourceTree = "<group>"; };
 		23F4C1BE18CDD09300EF5181 /* liblibutils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibutils.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F4C1C818CDD0CF00EF5181 /* FileMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileMap.cpp; sourceTree = "<group>"; };
-		570D702D1C04983F00F32C83 /* SharedBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SharedBuffer.cpp; sourceTree = "<group>"; };
-		570D702F1C04988A00F32C83 /* SystemClock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SystemClock.cpp; sourceTree = "<group>"; };
-		570D70371C04A73A00F32C83 /* RefBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RefBase.cpp; sourceTree = "<group>"; };
-		570D70391C04A74D00F32C83 /* Threads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Threads.cpp; sourceTree = "<group>"; };
-		570D703B1C04B12D00F32C83 /* String8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = String8.cpp; sourceTree = "<group>"; };
-		570D703C1C04B12D00F32C83 /* String16.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = String16.cpp; sourceTree = "<group>"; };
-		570D703F1C04B1A700F32C83 /* Unicode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Unicode.cpp; sourceTree = "<group>"; };
-		570D70411C04B29900F32C83 /* Timers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timers.cpp; sourceTree = "<group>"; };
-		570D70431C04B54600F32C83 /* Looper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Looper.cpp; sourceTree = "<group>"; };
-		570D70451C04B6B400F32C83 /* Static.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Static.cpp; sourceTree = "<group>"; };
-		57AFF9391C087A6600A5CBCF /* misc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = misc.cpp; sourceTree = "<group>"; };
-		57AFF93A1C087A6600A5CBCF /* VectorImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorImpl.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,18 +88,6 @@
 		23F4C1B918CDCECA00EF5181 /* libutils */ = {
 			isa = PBXGroup;
 			children = (
-				57AFF9391C087A6600A5CBCF /* misc.cpp */,
-				57AFF93A1C087A6600A5CBCF /* VectorImpl.cpp */,
-				570D702F1C04988A00F32C83 /* SystemClock.cpp */,
-				570D702D1C04983F00F32C83 /* SharedBuffer.cpp */,
-				570D70371C04A73A00F32C83 /* RefBase.cpp */,
-				570D70391C04A74D00F32C83 /* Threads.cpp */,
-				570D70431C04B54600F32C83 /* Looper.cpp */,
-				570D70411C04B29900F32C83 /* Timers.cpp */,
-				570D703B1C04B12D00F32C83 /* String8.cpp */,
-				570D703F1C04B1A700F32C83 /* Unicode.cpp */,
-				570D70451C04B6B400F32C83 /* Static.cpp */,
-				570D703C1C04B12D00F32C83 /* String16.cpp */,
 				23F4C1C818CDD0CF00EF5181 /* FileMap.cpp */,
 			);
 			path = libutils;
@@ -188,19 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				570D70441C04B54600F32C83 /* Looper.cpp in Sources */,
-				570D70381C04A73A00F32C83 /* RefBase.cpp in Sources */,
-				57AFF93C1C087A6600A5CBCF /* VectorImpl.cpp in Sources */,
-				570D702E1C04983F00F32C83 /* SharedBuffer.cpp in Sources */,
-				570D70421C04B29900F32C83 /* Timers.cpp in Sources */,
-				570D70301C04988A00F32C83 /* SystemClock.cpp in Sources */,
-				57AFF93B1C087A6600A5CBCF /* misc.cpp in Sources */,
-				570D70461C04B6B400F32C83 /* Static.cpp in Sources */,
-				570D703D1C04B12D00F32C83 /* String8.cpp in Sources */,
-				570D703E1C04B12D00F32C83 /* String16.cpp in Sources */,
 				23F4C1E218CDD0CF00EF5181 /* FileMap.cpp in Sources */,
-				570D703A1C04A74D00F32C83 /* Threads.cpp in Sources */,
-				570D70401C04B1A700F32C83 /* Unicode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +163,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -250,7 +201,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -291,11 +241,9 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/src/main/native/LibUtils-Prefix.pch";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"\"$(ANDROID_ROOT)/system/core/include\"",
-					"\"$(ANDROID_ROOT)/libnativehelper/include/nativehelper\"",
-					"\"$(ANDROID_ROOT)/system/core/libutils\"",
-					"\"$(ANDROID_ROOT)/bionic/libc/kernel/uapi\"",
-					"\"$(ANDROID_ROOT)/bionic/libc/kernel/uapi/asm-x86\"",
+					"\"$(SRCROOT)/../../../../../aosp/system/core/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/libnativehelper/include/nativehelper\"",
+					../moe.base/src/main/native,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -306,11 +254,9 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = "$(SRCROOT)/src/main/native/LibUtils-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"\"$(ANDROID_ROOT)/system/core/include\"",
-					"\"$(ANDROID_ROOT)/libnativehelper/include/nativehelper\"",
-					"\"$(ANDROID_ROOT)/system/core/libutils\"",
-					"\"$(ANDROID_ROOT)/bionic/libc/kernel/uapi\"",
-					"\"$(ANDROID_ROOT)/bionic/libc/kernel/uapi/asm-x86\"",
+					"\"$(SRCROOT)/../../../../../aosp/system/core/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/libnativehelper/include/nativehelper\"",
+					../moe.base/src/main/native,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

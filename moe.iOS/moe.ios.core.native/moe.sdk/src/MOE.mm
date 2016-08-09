@@ -1,29 +1,28 @@
 /*
-Copyright 2014-2016 Intel Corporation
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-*/
+ * Copyright (c) 2014-2016, Intel Corporation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 #import <UIKit/UIKit.h>
 
 #include <pthread.h>
 
-#define IMAGE_PREFIX "-Ximage:"
-#define IMAGE_NAME "image.art"
-
 #define CLASSPATH_PREFIX "-cp"
 
 #define BOOTCLASSPATH_PREFIX "-Xbootclasspath:"
+#define BOOTCLASSPATH_CORE "moe-ios-dex.jar"
+#define BOOTCLASSPATH_MAIN "classes.jar"
 #define RESOURCES_NAME "application.jar"
 
 NSString* moeErrorTitle;
@@ -31,15 +30,8 @@ NSString* moeErrorDescription;
 
 #include "oat.h"
 
-#import "ErrorDelegate.h"
-
-#include "moe_entry.h"
-
 #define xstr(s) str(s)
 #define str(s) #s
-
-// Defined in runtime
-extern void* get_oat_data(size_t* size);
 
 // Defined in dalvikvm
 extern "C" int dalvikvm(int argc, char** argv, int prec, char* const prev[]);
@@ -68,32 +60,8 @@ extern "C" double hypot(double a, double b) {
 #endif
 
 extern "C" int moevm(const int jargc, char* const* jargv) {
-  reserve_tls_key();
-
   @autoreleasepool {
     NSBundle* mainBundle = [NSBundle mainBundle];
-
-    // Do same initial checks
-    {
-      // Get the oatdata for validation purposes
-      BOOL error = false;
-      void* oatdata = get_oat_data(nullptr);
-
-      if (oatdata == NULL) {
-        // If oatdata segment is missing then continuing is unnecessary
-        moeErrorTitle = @"Wrong Build";
-        moeErrorDescription =
-            @"The binary is built without oatdata, try to rebuild it again!";
-        error = true;
-      }
-
-      // If there is an error, then report it to the user through the
-      // ErrorDelegate
-      if (error) {
-        return UIApplicationMain(0, 0, nil,
-                                 NSStringFromClass([ErrorDelegate class]));
-      }
-    }
 
     NSString* resourcePath = [mainBundle resourcePath];
 
@@ -101,7 +69,7 @@ extern "C" int moevm(const int jargc, char* const* jargv) {
     // Use framework icudt54l.dat and if that is not present then
     // use the one from the resources directory
     NSBundle* fwBundle =
-        [NSBundle bundleWithIdentifier:@"org.moe"];
+        [NSBundle bundleWithIdentifier:@"MOE.Main.Class"];
 
 #ifndef USE_APLE_CF
     if (fwBundle) {
@@ -144,17 +112,16 @@ extern "C" int moevm(const int jargc, char* const* jargv) {
 
     // Create arguments for classpath
     [args addObject:@CLASSPATH_PREFIX];
-    [args addObject:@""];
+    [args addObject:[NSString stringWithFormat:@"%@/%s:%@", resourcePath,
+                                                            RESOURCES_NAME,
+                                                            resourcePath]];
 
     // Create argument for boot classpath, resources will be placed there
     [args
-        addObject:[NSString stringWithFormat:@"%s%@/%s:%@",
-                                             BOOTCLASSPATH_PREFIX, resourcePath,
-                                             RESOURCES_NAME, resourcePath]];
-
-    // Create argument for art image
-    [args addObject:[NSString stringWithFormat:@"%s%@/%s", IMAGE_PREFIX,
-                                               resourcePath, IMAGE_NAME]];
+        addObject:[NSString stringWithFormat:@"%s%@/%s:%@/%s",
+                                             BOOTCLASSPATH_PREFIX,
+                                             resourcePath, BOOTCLASSPATH_CORE,
+                                             resourcePath, BOOTCLASSPATH_MAIN]];
 
     // Read VM args
     int jargi = 1;
@@ -178,9 +145,6 @@ extern "C" int moevm(const int jargc, char* const* jargv) {
     if (mainClass == nil) {
       mainClass =
           [[mainBundle infoDictionary] objectForKey:@"MOE.Main.Class"];
-    }
-    if (mainClass == nil) {
-      LOG(art::FATAL) << "mainClass is nil!";
     }
     [args addObject:mainClass];
     
@@ -219,7 +183,7 @@ extern "C" int moevm(const int jargc, char* const* jargv) {
 
     // Create c argument array
     NSUInteger argc = [args count];
-    const char** argv = (char const**)alloca((argc + 1) * sizeof(char*));
+    const char** argv = (char const**)alloca(argc * sizeof(char*) + 1);
     for (NSUInteger i = 0; i < argc; i++) {
       argv[i] = [[args objectAtIndex:i] UTF8String];
     }

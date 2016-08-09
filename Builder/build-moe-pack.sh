@@ -27,7 +27,7 @@ mkdir -p $MOE_TMP/jars-repack/moe-ios-retro
 mkdir -p $MOE_TMP/jars-repack/moe-ios-junit
 mkdir -p $MOE_TMP/jars-repack/ios-javadoc
 mkdir -p $MOE_HOME/sdk
-mkdir -p $MOE_HOME/tools
+mkdir -p $MOE_HOME/tools/lib
 
 unzip $target_repo/org/moe/moe-ios/1.0.0.${qualifier}-${build_number}/moe-ios-1.0.0.${qualifier}-${build_number}-runtime.zip -d $MOE_HOME/sdk
 
@@ -40,8 +40,9 @@ java -Dretrolambda.inputDir=$MOE_TMP/jars-repack/moe-ios/ -Dretrolambda.classpat
 cd $MOE_TMP/jars-repack/moe-ios-retro
 jar -cvf moe-ios-retro.jar *
 
-$MOE_TMP/moe-tools/platform-tools/dx --dex --output $MOE_HOME/sdk/moe-ios-retro.jar --core-library --multi-dex $MOE_TMP/jars-repack/moe-ios-retro/moe-ios-retro.jar
-$MOE_TMP/moe-tools/platform-tools/dx --dex --output $MOE_HOME/sdk/moe-core.dex --core-library $target_repo/org/moe/moe-ios/1.0.0.${qualifier}-${build_number}/moe-ios-1.0.0.${qualifier}-${build_number}-core.jar
+$MOE_TMP/moe-tools/platform-tools/jack $MOE_HOME/sdk/moe-ios-dex.jar --verbose WARNING --multi-dex NATIVE -D jack.android.min-api-level=24 --import $MOE_TMP/jars-repack/moe-ios-retro/moe-ios-retro.jar --import $target_repo/org/moe/moe-ios/1.0.0.${qualifier}-${build_number}/moe-ios-1.0.0.${qualifier}-${build_number}-core.jar
+$MOE_TMP/moe-tools/platform-tools/jack $MOE_HOME/sdk/moe-ios-retro.jar --verbose WARNING --multi-dex NATIVE -D jack.android.min-api-level=24 --import $MOE_TMP/jars-repack/moe-ios-retro/moe-ios-retro.jar
+$MOE_TMP/moe-tools/platform-tools/jack $MOE_HOME/sdk/moe-core.dex --verbose WARNING --multi-dex NATIVE -D jack.android.min-api-level=24 --import $target_repo/org/moe/moe-ios/1.0.0.${qualifier}-${build_number}/moe-ios-1.0.0.${qualifier}-${build_number}-core.jar
 
 rm -rf $MOE_TMP/jars-repack/moe-ios/*
 rm -rf $MOE_TMP/jars-repack/moe-core/*
@@ -63,7 +64,7 @@ jar -xvf $target_repo/org/moe/moe-ios/1.0.0.${qualifier}-${build_number}/moe-ios
 java -Dretrolambda.inputDir=$MOE_TMP/jars-repack/moe-ios-junit -Dretrolambda.classpath=$MOE_TMP/jars-repack/moe-ios/ -Dretrolambda.defaultMethods=true -Dretrolambda.outputDir=$MOE_TMP/jars-repack/moe-ios-junit-out/ -jar $MOE_TMP/moe-tools/script/retrolambda-2.0.2.jar
 cd $MOE_TMP/jars-repack/moe-ios-junit-out/
 jar -cvf $MOE_HOME/sdk/moe-ios-junit.jar *
-$MOE_TMP/moe-tools/platform-tools/dx --dex --output $MOE_HOME/sdk/moe-ios-junit.dex --core-library $MOE_HOME/sdk/moe-ios-junit.jar
+$MOE_TMP/moe-tools/platform-tools/jack $MOE_HOME/sdk/moe-ios-junit.dex --verbose WARNING --multi-dex NATIVE -D jack.android.min-api-level=24 --import $MOE_HOME/sdk/moe-ios-junit.jar
 
 mkdir -p $MOE_HOME/tools/macosx/x86_64
 mkdir -p $MOE_HOME/tools/windows/x86_64
@@ -80,12 +81,14 @@ cp $target_repo/org/moe/natj-win/1.0.0.${qualifier}-${build_number}/natj-win-1.0
 
 rm -rf $MOE_HOME/sdk/LICENSE.TXT
 cp $MOE_TMP/moe-tools/platform-tools/dex2oat $MOE_HOME/tools
-cp $MOE_TMP/moe-tools/platform-tools/dx $MOE_HOME/tools
-cp $MOE_TMP/moe-tools/platform-tools/lib/dx.jar $MOE_HOME/tools
+cp $MOE_TMP/moe-tools/platform-tools/jack $MOE_HOME/tools
+cp $MOE_TMP/moe-tools/platform-tools/lib/jack-4.7.BETA.jar $MOE_HOME/tools/lib
 cp $MOE_TMP/moe-tools/script/retrolambda-2.0.2.jar $MOE_HOME/tools/retrolambda.jar
 cp $MOE_TMP/moe-tools/script/java8support.jar $MOE_HOME/tools/java8support.jar
 cp $MOE_TMP/moe-tools/script/proguard* $MOE_HOME/tools
 cp $MOE_TMP/moe-tools/preloaded-classes $MOE_HOME/tools
+touch $MOE_HOME/tools/dx
+touch $MOE_HOME/tools/ios-simulator.jar
 
 #adding java-docs
 cd $MOE_TMP/jars-repack/ios-javadoc

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		237FAA3C1BA98C4E00720738 /* generate_constants.cc in Sources */ = {isa = PBXBuildFile; fileRef = 237FAA3B1BA98C4E00720738 /* generate_constants.cc */; settings = {ASSET_TAGS = (); }; };
+		237FAA3C1BA98C4E00720738 /* generate_constants.cc in Sources */ = {isa = PBXBuildFile; fileRef = 237FAA3B1BA98C4E00720738 /* generate_constants.cc */; };
 		23F4C70318CDD43A00EF5181 /* org_conscrypt_NativeCrypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23F4C68018CDD43A00EF5181 /* org_conscrypt_NativeCrypto.cpp */; };
 /* End PBXBuildFile section */
 
@@ -260,7 +260,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
@@ -299,7 +298,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				DEAD_CODE_STRIPPING = YES;
@@ -363,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(ANDROID_ROOT)/external/openssl/include\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../aosp/external/openssl/include\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -398,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(ANDROID_ROOT)/external/openssl/include\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../aosp/external/openssl/include\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,12 +409,13 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = "$(SRCROOT)/src/main/native/Conscrypt-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"\"$(ANDROID_ROOT)/libnativehelper/include/nativehelper\"",
-					"\"$(ANDROID_ROOT)/system/core/include\"",
-					"\"$(ANDROID_ROOT)/external/openssl/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/libnativehelper/include/nativehelper\"",
+					"\"$(SRCROOT)/../../../../../aosp/system/core/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/include\"",
+					../moe.base/src/main/native,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(ANDROID_ROOT)/libcore/luni/src/main/native\" \"$(ANDROID_ROOT)/libcore/include\" \"$(ANDROID_ROOT)/external/openssl\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../aosp/libcore/luni/src/main/native\" \"$(SRCROOT)/../../../../../aosp/libcore/include\" \"$(SRCROOT)/../../../../../aosp/external/openssl\"";
 			};
 			name = Debug;
 		};
@@ -425,12 +424,13 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = "$(SRCROOT)/src/main/native/Conscrypt-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"\"$(ANDROID_ROOT)/libnativehelper/include/nativehelper\"",
-					"\"$(ANDROID_ROOT)/system/core/include\"",
-					"\"$(ANDROID_ROOT)/external/openssl/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/libnativehelper/include/nativehelper\"",
+					"\"$(SRCROOT)/../../../../../aosp/system/core/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/include\"",
+					../moe.base/src/main/native,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(ANDROID_ROOT)/libcore/luni/src/main/native\" \"$(ANDROID_ROOT)/libcore/include\" \"$(ANDROID_ROOT)/external/openssl\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../aosp/libcore/luni/src/main/native\" \"$(SRCROOT)/../../../../../aosp/libcore/include\" \"$(SRCROOT)/../../../../../aosp/external/openssl\"";
 			};
 			name = Release;
 		};
@@ -453,6 +453,7 @@
 				237FAA371BA98C3000720738 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23F4C60018CDD34C00EF5181 /* Build configuration list for PBXNativeTarget "conscrypt" */ = {
 			isa = XCConfigurationList;

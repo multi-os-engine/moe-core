@@ -1,0 +1,10 @@
+project(android.system.core.libcutils)
+
+add_library(android.system.core.libcutils STATIC ../../../../../system/core/libcutils/strdup16to8.c ../../../../../system/core/libcutils/socket_loopback_client.c ../../../../../system/core/libcutils/sockets.c ../../../../../system/core/libcutils/multiuser.c ../../../../../system/core/libcutils/process_name.c ../../../../../system/core/libcutils/str_parms.c ../../../../../system/core/libcutils/socket_local_server.c ../../../../../system/core/libcutils/socket_inaddr_any_server.c ../../../../../system/core/libcutils/../../../bionic/libc/upstream-dlmalloc/malloc.c ../../../../../system/core/libcutils/sched_policy.c ../../../../../system/core/libcutils/socket_loopback_server.c ../../../../../system/core/libcutils/config_utils.c ../../../../../system/core/libcutils/hashmap.c ../../../../../system/core/libcutils/socket_local_client.c ../../../../../system/core/libcutils/threads.c ../../../../../system/core/libcutils/open_memstream.c ../../../../../system/core/libcutils/load_file.c ../../../../../system/core/libcutils/socket_network_client.c ../../../../../system/core/libcutils/iosched_policy.c ../../../../../system/core/libcutils/atomic.cpp ../../../../../system/core/libcutils/native_handle.c ../../../../../system/core/libcutils/strdup8to16.c ../../../../../system/core/libcutils/record_stream.c)
+
+set_target_properties(android.system.core.libcutils PROPERTIES COMPILE_FLAGS "-include ${PROJECT_SOURCE_DIR}/src/main/native/LibCUtils-Prefix.pch")
+
+target_compile_definitions(android.system.core.libcutils PRIVATE ANDROID_SMP=1 ANDROID MOE=1 HAVE_LITTLE_ENDIAN NDEBUG)
+
+target_include_directories(android.system.core.libcutils SYSTEM PRIVATE "${PROJECT_SOURCE_DIR}/../../../../../bionic/libc/kernel/common" "${PROJECT_SOURCE_DIR}/../../../../../system/core/include" ${PROJECT_SOURCE_DIR}/../moe.base/src/main/native ${PROJECT_SOURCE_DIR}/../moe.base/src_windows/main/native ${PROJECT_SOURCE_DIR}/../mingw.winpthreads/include ${PROJECT_SOURCE_DIR}/../mingw.wincrt/include)
+

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Copyright 2014-2016 Intel Corporation
+# Copyright (c) 2014-2016, Intel Corporation
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,8 +28,10 @@ mkdir -p licenses
 cd licenses
 
 echo "This folder contains the licenses for the
-open-source components used in the Multi-OS Engine.
+open-source components used in the MOE SDK.
 
+Please contact MOE Support at support@moe.com
+if you have any questions regarding these licenses.
 " > README
 
 cp $1/art/NOTICE license-art

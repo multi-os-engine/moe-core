@@ -1,0 +1,30 @@
+#!/bin/bash
+
+ABSOLUTE_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+VERSION="4.7.BETA"
+
+TEMP=`mktemp -d`
+echo "Created temp working directory $TEMP"
+function cleanup {
+    rm -rf "$TEMP"
+    echo "Deleted temp working directory $TEMP"
+}
+trap cleanup EXIT
+
+realpath() {
+    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+DEST=`realpath $1`
+shift
+
+java -jar "${ABSOLUTE_PATH}/lib/jack-${VERSION}.jar" --output-dex "${TEMP}" "$@"
+ret=$?
+if [ $ret -ne 0 ]; then
+    echo "Jack has failed"
+    exit $ret
+fi
+
+pushd $TEMP
+zip -r $DEST .
+popd

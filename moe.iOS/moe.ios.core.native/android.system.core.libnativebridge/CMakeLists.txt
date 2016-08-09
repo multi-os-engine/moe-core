@@ -1,0 +1,1 @@
+DEFINE_PROJECT(staticlib "-DANDROID_SMP=1;-DANDROID;-DMOE=1;-DHAVE_LITTLE_ENDIAN;-DNDEBUG" "../../../../../system/core/include;../../../../../libnativehelper/include/nativehelper;../moe.base/src/main/native;../moe.base/src_windows/main/native" "" "MOE-Prefix.pch" "")

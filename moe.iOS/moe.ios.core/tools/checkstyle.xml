@@ -156,7 +156,7 @@
         <!--
         <module name="CustomImportOrder">
             <property name="thirdPartyPackageRegExp" value=".*"/>
-            <property name="specialImportsRegExp" value="org\.moe\.natj\.(?!org\.).*"/>
+            <property name="specialImportsRegExp" value="com\.moe\.natj\.(?!org\.).*"/>
             <property name="sortImportsInGroupAlphabetically" value="true"/>
             <property name="customImportOrderRules" value="STATIC###STANDARD_JAVA_PACKAGE###THIRD_PARTY_PACKAGE###SPECIAL_IMPORTS"/>
         </module>

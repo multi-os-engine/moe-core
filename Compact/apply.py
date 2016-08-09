@@ -82,7 +82,7 @@ for repo in repositories:
     proc = subprocess.Popen(['git', 'config', 'user.name', 'MOE Release'], cwd=tmp+path)
     proc.wait()
 
-    proc = subprocess.Popen(['git', 'config', 'user.email', 'my@moe.com'], cwd=tmp+path)
+    proc = subprocess.Popen(['git', 'config', 'user.email', 'release@moe.com'], cwd=tmp+path)
     proc.wait()
 
     if base is not None:
@@ -128,7 +128,7 @@ tree.write(tmp+"manifest/default.xml")
 proc = subprocess.Popen(['git', 'config', 'user.name', 'MOE Release'], cwd=tmp+"manifest")
 proc.wait()
 
-proc = subprocess.Popen(['git', 'config', 'user.email', 'my@moe.com'], cwd=tmp+"manifest")
+proc = subprocess.Popen(['git', 'config', 'user.email', 'release@moe.com'], cwd=tmp+"manifest")
 proc.wait()
 
 proc = subprocess.Popen(['git', 'add', '--all'], cwd=tmp+"manifest")

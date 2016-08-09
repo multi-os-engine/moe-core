@@ -7,39 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22E2867A1C1751E4003D515D /* libcore_icu_NativeBreakIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22E286791C1751E4003D515D /* libcore_icu_NativeBreakIterator.cpp */; settings = {ASSET_TAGS = (); }; };
-		22E2867C1C175F0A003D515D /* libcore_icu_NativeCollation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22E2867B1C175F0A003D515D /* libcore_icu_NativeCollation.cpp */; settings = {ASSET_TAGS = (); }; };
-		22FC53E81C19D6AE008CA804 /* libcore_icu_Transliterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22FC53E71C19D6AE008CA804 /* libcore_icu_Transliterator.cpp */; settings = {ASSET_TAGS = (); }; };
 		2384543019E2C5B2000DFC86 /* android_system_OsConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 238453F019E2C5B2000DFC86 /* android_system_OsConstants.cpp */; };
-		2384543119E2C5B2000DFC86 /* AsynchronousCloseMonitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 238453F119E2C5B2000DFC86 /* AsynchronousCloseMonitor.cpp */; };
 		2384543319E2C5B2000DFC86 /* canonicalize_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 238453F319E2C5B2000DFC86 /* canonicalize_path.cpp */; };
 		2384543419E2C5B2000DFC86 /* cbigint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 238453F419E2C5B2000DFC86 /* cbigint.cpp */; };
 		2384543619E2C5B2000DFC86 /* ExecStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 238453F619E2C5B2000DFC86 /* ExecStrings.cpp */; };
 		2384543819E2C5B2000DFC86 /* IcuUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 238453F819E2C5B2000DFC86 /* IcuUtilities.cpp */; };
-		2384543A19E2C5B2000DFC86 /* java_io_File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 238453FA19E2C5B2000DFC86 /* java_io_File.cpp */; };
-		2384543B19E2C5B2000DFC86 /* java_io_FileDescriptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 238453FB19E2C5B2000DFC86 /* java_io_FileDescriptor.cpp */; };
-		2384543C19E2C5B2000DFC86 /* java_io_ObjectStreamClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 238453FC19E2C5B2000DFC86 /* java_io_ObjectStreamClass.cpp */; };
-		2384543D19E2C5B2000DFC86 /* java_lang_Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 238453FD19E2C5B2000DFC86 /* java_lang_Character.cpp */; };
-		2384543E19E2C5B2000DFC86 /* java_lang_Double.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 238453FE19E2C5B2000DFC86 /* java_lang_Double.cpp */; };
-		2384543F19E2C5B2000DFC86 /* java_lang_Float.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 238453FF19E2C5B2000DFC86 /* java_lang_Float.cpp */; };
-		2384544019E2C5B2000DFC86 /* java_lang_Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384540019E2C5B2000DFC86 /* java_lang_Math.cpp */; };
-		2384544119E2C5B2000DFC86 /* java_lang_ProcessManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384540119E2C5B2000DFC86 /* java_lang_ProcessManager.cpp */; };
-		2384544219E2C5B2000DFC86 /* java_lang_RealToString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384540219E2C5B2000DFC86 /* java_lang_RealToString.cpp */; };
-		2384544319E2C5B2000DFC86 /* java_lang_StrictMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384540319E2C5B2000DFC86 /* java_lang_StrictMath.cpp */; };
 		2384544419E2C5B2000DFC86 /* java_lang_StringToReal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384540419E2C5B2000DFC86 /* java_lang_StringToReal.cpp */; };
-		2384544519E2C5B2000DFC86 /* java_lang_System.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384540519E2C5B2000DFC86 /* java_lang_System.cpp */; };
 		2384544619E2C5B2000DFC86 /* java_math_NativeBN.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384540619E2C5B2000DFC86 /* java_math_NativeBN.cpp */; };
-		2384544A19E2C5B2000DFC86 /* java_util_jar_StrictJarFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384540A19E2C5B2000DFC86 /* java_util_jar_StrictJarFile.cpp */; };
 		2384544B19E2C5B2000DFC86 /* java_util_regex_Matcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384540B19E2C5B2000DFC86 /* java_util_regex_Matcher.cpp */; };
 		2384544C19E2C5B2000DFC86 /* java_util_regex_Pattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384540C19E2C5B2000DFC86 /* java_util_regex_Pattern.cpp */; };
-		2384544D19E2C5B2000DFC86 /* java_util_zip_Adler32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384540D19E2C5B2000DFC86 /* java_util_zip_Adler32.cpp */; };
-		2384544E19E2C5B2000DFC86 /* java_util_zip_CRC32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384540E19E2C5B2000DFC86 /* java_util_zip_CRC32.cpp */; };
-		2384544F19E2C5B2000DFC86 /* java_util_zip_Deflater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384540F19E2C5B2000DFC86 /* java_util_zip_Deflater.cpp */; };
-		2384545019E2C5B2000DFC86 /* java_util_zip_Inflater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384541019E2C5B2000DFC86 /* java_util_zip_Inflater.cpp */; };
 		2384545119E2C5B2000DFC86 /* JniException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384541119E2C5B2000DFC86 /* JniException.cpp */; };
 		2384545519E2C5B2000DFC86 /* libcore_icu_ICU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384541519E2C5B2000DFC86 /* libcore_icu_ICU.cpp */; };
 		2384545819E2C5B2000DFC86 /* libcore_icu_NativeConverter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384541819E2C5B2000DFC86 /* libcore_icu_NativeConverter.cpp */; };
-		2384545919E2C5B2000DFC86 /* libcore_icu_NativeDecimalFormat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384541919E2C5B2000DFC86 /* libcore_icu_NativeDecimalFormat.cpp */; };
 		2384545D19E2C5B2000DFC86 /* libcore_icu_TimeZoneNames.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384541D19E2C5B2000DFC86 /* libcore_icu_TimeZoneNames.cpp */; };
 		2384545F19E2C5B2000DFC86 /* libcore_io_AsynchronousCloseMonitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384541F19E2C5B2000DFC86 /* libcore_io_AsynchronousCloseMonitor.cpp */; };
 		2384546019E2C5B2000DFC86 /* libcore_io_Memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384542019E2C5B2000DFC86 /* libcore_io_Memory.cpp */; };
@@ -51,19 +30,74 @@
 		2384546A19E2C5B2000DFC86 /* sun_misc_Unsafe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384542B19E2C5B2000DFC86 /* sun_misc_Unsafe.cpp */; };
 		2384546B19E2C5B2000DFC86 /* valueOf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384542C19E2C5B2000DFC86 /* valueOf.cpp */; };
 		2384546D19E2C5B2000DFC86 /* ZipUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2384542E19E2C5B2000DFC86 /* ZipUtilities.cpp */; };
-		57F1D9611B67600700E6FF2E /* java_net_NetworkInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57F1D9601B67600700E6FF2E /* java_net_NetworkInterface.cpp */; };
+		8B553B251C3BDD6700FB980A /* Adler32.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AC41C3BDD6700FB980A /* Adler32.c */; };
+		8B553B261C3BDD6700FB980A /* Bits.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AC51C3BDD6700FB980A /* Bits.c */; };
+		8B553B271C3BDD6700FB980A /* canonicalize_md.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AC61C3BDD6700FB980A /* canonicalize_md.c */; };
+		8B553B281C3BDD6700FB980A /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AC71C3BDD6700FB980A /* Character.cpp */; };
+		8B553B291C3BDD6700FB980A /* Console_md.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AC91C3BDD6700FB980A /* Console_md.c */; };
+		8B553B2A1C3BDD6700FB980A /* DatagramChannelImpl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553ACA1C3BDD6700FB980A /* DatagramChannelImpl.c */; };
+		8B553B2B1C3BDD6700FB980A /* DatagramDispatcher.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553ACB1C3BDD6700FB980A /* DatagramDispatcher.c */; };
+		8B553B2C1C3BDD6700FB980A /* DatagramPacket.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553ACC1C3BDD6700FB980A /* DatagramPacket.c */; };
+		8B553B2E1C3BDD6700FB980A /* Double.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553ACE1C3BDD6700FB980A /* Double.c */; };
+		8B553B301C3BDD6700FB980A /* FileChannelImpl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AD11C3BDD6700FB980A /* FileChannelImpl.c */; };
+		8B553B311C3BDD6700FB980A /* FileDescriptor_md.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AD21C3BDD6700FB980A /* FileDescriptor_md.c */; };
+		8B553B321C3BDD6700FB980A /* FileDispatcherImpl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AD31C3BDD6700FB980A /* FileDispatcherImpl.c */; };
+		8B553B331C3BDD6700FB980A /* FileInputStream.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AD41C3BDD6700FB980A /* FileInputStream.c */; };
+		8B553B341C3BDD6700FB980A /* FileKey.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AD51C3BDD6700FB980A /* FileKey.c */; };
+		8B553B351C3BDD6700FB980A /* FileOutputStream_md.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AD61C3BDD6700FB980A /* FileOutputStream_md.c */; };
+		8B553B361C3BDD6700FB980A /* FileSystem_md.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AD71C3BDD6700FB980A /* FileSystem_md.c */; };
+		8B553B371C3BDD6700FB980A /* FileSystemPreferences.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AD81C3BDD6700FB980A /* FileSystemPreferences.c */; };
+		8B553B381C3BDD6700FB980A /* Float.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AD91C3BDD6700FB980A /* Float.c */; };
+		8B553B391C3BDD6700FB980A /* Inet4Address.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553ADA1C3BDD6700FB980A /* Inet4Address.c */; };
+		8B553B3A1C3BDD6700FB980A /* Inet4AddressImpl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553ADB1C3BDD6700FB980A /* Inet4AddressImpl.c */; };
+		8B553B3B1C3BDD6700FB980A /* Inet6Address.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553ADC1C3BDD6700FB980A /* Inet6Address.c */; };
+		8B553B3C1C3BDD6700FB980A /* Inet6AddressImpl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553ADD1C3BDD6700FB980A /* Inet6AddressImpl.c */; };
+		8B553B3D1C3BDD6700FB980A /* InetAddress.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553ADE1C3BDD6700FB980A /* InetAddress.c */; };
+		8B553B3E1C3BDD6700FB980A /* InheritedChannel.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553ADF1C3BDD6700FB980A /* InheritedChannel.c */; };
+		8B553B3F1C3BDD6700FB980A /* io_util_md.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AE01C3BDD6700FB980A /* io_util_md.c */; };
+		8B553B401C3BDD6700FB980A /* io_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AE21C3BDD6700FB980A /* io_util.c */; };
+		8B553B411C3BDD6700FB980A /* IOUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AE41C3BDD6700FB980A /* IOUtil.c */; };
+		8B553B431C3BDD6700FB980A /* java_util_zip_CRC32.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AEF1C3BDD6700FB980A /* java_util_zip_CRC32.c */; };
+		8B553B441C3BDD6700FB980A /* java_util_zip_Deflater.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AF01C3BDD6700FB980A /* java_util_zip_Deflater.c */; };
+		8B553B451C3BDD6700FB980A /* java_util_zip_Inflater.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AF11C3BDD6700FB980A /* java_util_zip_Inflater.c */; };
+		8B553B461C3BDD6700FB980A /* java_util_zip_ZipFile.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AF21C3BDD6700FB980A /* java_util_zip_ZipFile.c */; };
+		8B553B471C3BDD6700FB980A /* jni_util_md.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AF71C3BDD6700FB980A /* jni_util_md.c */; };
+		8B553B481C3BDD6700FB980A /* jni_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AF81C3BDD6700FB980A /* jni_util.c */; };
+		8B553B491C3BDD6700FB980A /* linux_close.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AFC1C3BDD6700FB980A /* linux_close.cpp */; };
+		8B553B4A1C3BDD6700FB980A /* MappedByteBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AFD1C3BDD6700FB980A /* MappedByteBuffer.c */; };
+		8B553B4B1C3BDD6700FB980A /* Math.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AFE1C3BDD6700FB980A /* Math.c */; };
+		8B553B4C1C3BDD6700FB980A /* NativeThread.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553AFF1C3BDD6700FB980A /* NativeThread.c */; };
+		8B553B4D1C3BDD6700FB980A /* net_util_md.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B001C3BDD6700FB980A /* net_util_md.c */; };
+		8B553B4E1C3BDD6700FB980A /* net_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B021C3BDD6700FB980A /* net_util.c */; };
+		8B553B4F1C3BDD6700FB980A /* Net.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B041C3BDD6700FB980A /* Net.c */; };
+		8B553B501C3BDD6700FB980A /* NetworkInterface.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B051C3BDD6700FB980A /* NetworkInterface.c */; };
+		8B553B511C3BDD6700FB980A /* ObjectInputStream.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B081C3BDD6700FB980A /* ObjectInputStream.c */; };
+		8B553B521C3BDD6700FB980A /* ObjectOutputStream.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B091C3BDD6700FB980A /* ObjectOutputStream.c */; };
+		8B553B531C3BDD6700FB980A /* ObjectStreamClass.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B0A1C3BDD6700FB980A /* ObjectStreamClass.c */; };
+		8B553B541C3BDD6700FB980A /* PlainDatagramSocketImpl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B0C1C3BDD6700FB980A /* PlainDatagramSocketImpl.c */; };
+		8B553B551C3BDD6700FB980A /* PlainSocketImpl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B0D1C3BDD6700FB980A /* PlainSocketImpl.c */; };
+		8B553B561C3BDD6700FB980A /* ProcessEnvironment_md.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B0E1C3BDD6700FB980A /* ProcessEnvironment_md.c */; };
+		8B553B571C3BDD6700FB980A /* Register.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B0F1C3BDD6700FB980A /* Register.cpp */; };
+		8B553B581C3BDD6700FB980A /* Runtime.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B101C3BDD6700FB980A /* Runtime.c */; };
+		8B553B591C3BDD6700FB980A /* ServerSocketChannelImpl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B111C3BDD6700FB980A /* ServerSocketChannelImpl.c */; };
+		8B553B5A1C3BDD6700FB980A /* Shutdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B121C3BDD6700FB980A /* Shutdown.c */; };
+		8B553B5B1C3BDD6700FB980A /* SocketChannelImpl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B131C3BDD6700FB980A /* SocketChannelImpl.c */; };
+		8B553B5C1C3BDD6700FB980A /* SocketInputStream.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B141C3BDD6700FB980A /* SocketInputStream.c */; };
+		8B553B5D1C3BDD6700FB980A /* SocketOutputStream.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B151C3BDD6700FB980A /* SocketOutputStream.c */; };
+		8B553B5E1C3BDD6700FB980A /* StrictMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B161C3BDD6700FB980A /* StrictMath.c */; };
+		8B553B601C3BDD6700FB980A /* System.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B1E1C3BDD6700FB980A /* System.c */; };
+		8B553B641C3BDD6700FB980A /* UNIXProcess_md.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B221C3BDD6700FB980A /* UNIXProcess_md.c */; };
+		8B553B651C3BDD6700FB980A /* zip_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B231C3BDD6700FB980A /* zip_util.c */; };
+		8B553B6B1C3C026C00FB980A /* UnixFileSystem_md.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B553B211C3BDD6700FB980A /* UnixFileSystem_md.c */; };
+		8BF4A85B1D07000A0088404B /* libcore_util_NativeAllocationRegistry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4A85A1D07000A0088404B /* libcore_util_NativeAllocationRegistry.cpp */; };
+		8BF4A85D1D07005D0088404B /* socket_tagger_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4A85C1D07005D0088404B /* socket_tagger_util.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22E286791C1751E4003D515D /* libcore_icu_NativeBreakIterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = libcore_icu_NativeBreakIterator.cpp; sourceTree = "<group>"; };
-		22E2867B1C175F0A003D515D /* libcore_icu_NativeCollation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = libcore_icu_NativeCollation.cpp; sourceTree = "<group>"; };
-		22FC53E71C19D6AE008CA804 /* libcore_icu_Transliterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = libcore_icu_Transliterator.cpp; sourceTree = "<group>"; };
 		2350E7BE18DA17BD00285E6C /* AndroidConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AndroidConfig.h; sourceTree = "<group>"; };
 		2353A63C17CE1AFD005CF3CC /* liblibcore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibcore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		238453EF19E2C570000DFC86 /* LibCore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LibCore-Prefix.pch"; sourceTree = "<group>"; };
 		238453F019E2C5B2000DFC86 /* android_system_OsConstants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = android_system_OsConstants.cpp; sourceTree = "<group>"; };
-		238453F119E2C5B2000DFC86 /* AsynchronousCloseMonitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AsynchronousCloseMonitor.cpp; sourceTree = "<group>"; };
-		238453F219E2C5B2000DFC86 /* AsynchronousCloseMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsynchronousCloseMonitor.h; sourceTree = "<group>"; };
 		238453F319E2C5B2000DFC86 /* canonicalize_path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = canonicalize_path.cpp; sourceTree = "<group>"; };
 		238453F419E2C5B2000DFC86 /* cbigint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cbigint.cpp; sourceTree = "<group>"; };
 		238453F519E2C5B2000DFC86 /* cbigint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cbigint.h; sourceTree = "<group>"; };
@@ -71,31 +105,14 @@
 		238453F719E2C5B2000DFC86 /* ExecStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecStrings.h; sourceTree = "<group>"; };
 		238453F819E2C5B2000DFC86 /* IcuUtilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IcuUtilities.cpp; sourceTree = "<group>"; };
 		238453F919E2C5B2000DFC86 /* IcuUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IcuUtilities.h; sourceTree = "<group>"; };
-		238453FA19E2C5B2000DFC86 /* java_io_File.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_io_File.cpp; sourceTree = "<group>"; };
-		238453FB19E2C5B2000DFC86 /* java_io_FileDescriptor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_io_FileDescriptor.cpp; sourceTree = "<group>"; };
-		238453FC19E2C5B2000DFC86 /* java_io_ObjectStreamClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_io_ObjectStreamClass.cpp; sourceTree = "<group>"; };
-		238453FD19E2C5B2000DFC86 /* java_lang_Character.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_lang_Character.cpp; sourceTree = "<group>"; };
-		238453FE19E2C5B2000DFC86 /* java_lang_Double.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_lang_Double.cpp; sourceTree = "<group>"; };
-		238453FF19E2C5B2000DFC86 /* java_lang_Float.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_lang_Float.cpp; sourceTree = "<group>"; };
-		2384540019E2C5B2000DFC86 /* java_lang_Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_lang_Math.cpp; sourceTree = "<group>"; };
-		2384540119E2C5B2000DFC86 /* java_lang_ProcessManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_lang_ProcessManager.cpp; sourceTree = "<group>"; };
-		2384540219E2C5B2000DFC86 /* java_lang_RealToString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_lang_RealToString.cpp; sourceTree = "<group>"; };
-		2384540319E2C5B2000DFC86 /* java_lang_StrictMath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_lang_StrictMath.cpp; sourceTree = "<group>"; };
 		2384540419E2C5B2000DFC86 /* java_lang_StringToReal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_lang_StringToReal.cpp; sourceTree = "<group>"; };
-		2384540519E2C5B2000DFC86 /* java_lang_System.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_lang_System.cpp; sourceTree = "<group>"; };
 		2384540619E2C5B2000DFC86 /* java_math_NativeBN.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_math_NativeBN.cpp; sourceTree = "<group>"; };
-		2384540A19E2C5B2000DFC86 /* java_util_jar_StrictJarFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_util_jar_StrictJarFile.cpp; sourceTree = "<group>"; };
 		2384540B19E2C5B2000DFC86 /* java_util_regex_Matcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_util_regex_Matcher.cpp; sourceTree = "<group>"; };
 		2384540C19E2C5B2000DFC86 /* java_util_regex_Pattern.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_util_regex_Pattern.cpp; sourceTree = "<group>"; };
-		2384540D19E2C5B2000DFC86 /* java_util_zip_Adler32.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_util_zip_Adler32.cpp; sourceTree = "<group>"; };
-		2384540E19E2C5B2000DFC86 /* java_util_zip_CRC32.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_util_zip_CRC32.cpp; sourceTree = "<group>"; };
-		2384540F19E2C5B2000DFC86 /* java_util_zip_Deflater.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_util_zip_Deflater.cpp; sourceTree = "<group>"; };
-		2384541019E2C5B2000DFC86 /* java_util_zip_Inflater.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_util_zip_Inflater.cpp; sourceTree = "<group>"; };
 		2384541119E2C5B2000DFC86 /* JniException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JniException.cpp; sourceTree = "<group>"; };
 		2384541219E2C5B2000DFC86 /* JniException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JniException.h; sourceTree = "<group>"; };
 		2384541519E2C5B2000DFC86 /* libcore_icu_ICU.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = libcore_icu_ICU.cpp; sourceTree = "<group>"; };
 		2384541819E2C5B2000DFC86 /* libcore_icu_NativeConverter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = libcore_icu_NativeConverter.cpp; sourceTree = "<group>"; };
-		2384541919E2C5B2000DFC86 /* libcore_icu_NativeDecimalFormat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = libcore_icu_NativeDecimalFormat.cpp; sourceTree = "<group>"; };
 		2384541D19E2C5B2000DFC86 /* libcore_icu_TimeZoneNames.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = libcore_icu_TimeZoneNames.cpp; sourceTree = "<group>"; };
 		2384541F19E2C5B2000DFC86 /* libcore_io_AsynchronousCloseMonitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = libcore_io_AsynchronousCloseMonitor.cpp; sourceTree = "<group>"; };
 		2384542019E2C5B2000DFC86 /* libcore_io_Memory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = libcore_io_Memory.cpp; sourceTree = "<group>"; };
@@ -108,7 +125,6 @@
 		2384542719E2C5B2000DFC86 /* readlink.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = readlink.cpp; sourceTree = "<group>"; };
 		2384542819E2C5B2000DFC86 /* readlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readlink.h; sourceTree = "<group>"; };
 		2384542919E2C5B2000DFC86 /* Register.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Register.cpp; sourceTree = "<group>"; };
-		2384542A19E2C5B2000DFC86 /* sub.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sub.mk; sourceTree = "<group>"; };
 		2384542B19E2C5B2000DFC86 /* sun_misc_Unsafe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sun_misc_Unsafe.cpp; sourceTree = "<group>"; };
 		2384542C19E2C5B2000DFC86 /* valueOf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = valueOf.cpp; sourceTree = "<group>"; };
 		2384542D19E2C5B2000DFC86 /* valueOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valueOf.h; sourceTree = "<group>"; };
@@ -117,6 +133,103 @@
 		2395DA6E1877109700950DD5 /* MOE-Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MOE-Common.h"; sourceTree = "<group>"; };
 		23A22F70187594F00060BF79 /* MOE-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MOE-Prefix.pch"; sourceTree = "<group>"; };
 		57F1D9601B67600700E6FF2E /* java_net_NetworkInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = java_net_NetworkInterface.cpp; sourceTree = "<group>"; };
+		8B553AC41C3BDD6700FB980A /* Adler32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Adler32.c; sourceTree = "<group>"; };
+		8B553AC51C3BDD6700FB980A /* Bits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Bits.c; sourceTree = "<group>"; };
+		8B553AC61C3BDD6700FB980A /* canonicalize_md.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = canonicalize_md.c; sourceTree = "<group>"; };
+		8B553AC71C3BDD6700FB980A /* Character.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Character.cpp; sourceTree = "<group>"; };
+		8B553AC81C3BDD6700FB980A /* classfile_constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classfile_constants.h; sourceTree = "<group>"; };
+		8B553AC91C3BDD6700FB980A /* Console_md.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Console_md.c; sourceTree = "<group>"; };
+		8B553ACA1C3BDD6700FB980A /* DatagramChannelImpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DatagramChannelImpl.c; sourceTree = "<group>"; };
+		8B553ACB1C3BDD6700FB980A /* DatagramDispatcher.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DatagramDispatcher.c; sourceTree = "<group>"; };
+		8B553ACC1C3BDD6700FB980A /* DatagramPacket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DatagramPacket.c; sourceTree = "<group>"; };
+		8B553ACE1C3BDD6700FB980A /* Double.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Double.c; sourceTree = "<group>"; };
+		8B553AD01C3BDD6700FB980A /* fdlibm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fdlibm.h; sourceTree = "<group>"; };
+		8B553AD11C3BDD6700FB980A /* FileChannelImpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileChannelImpl.c; sourceTree = "<group>"; };
+		8B553AD21C3BDD6700FB980A /* FileDescriptor_md.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileDescriptor_md.c; sourceTree = "<group>"; };
+		8B553AD31C3BDD6700FB980A /* FileDispatcherImpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileDispatcherImpl.c; sourceTree = "<group>"; };
+		8B553AD41C3BDD6700FB980A /* FileInputStream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileInputStream.c; sourceTree = "<group>"; };
+		8B553AD51C3BDD6700FB980A /* FileKey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileKey.c; sourceTree = "<group>"; };
+		8B553AD61C3BDD6700FB980A /* FileOutputStream_md.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileOutputStream_md.c; sourceTree = "<group>"; };
+		8B553AD71C3BDD6700FB980A /* FileSystem_md.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileSystem_md.c; sourceTree = "<group>"; };
+		8B553AD81C3BDD6700FB980A /* FileSystemPreferences.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileSystemPreferences.c; sourceTree = "<group>"; };
+		8B553AD91C3BDD6700FB980A /* Float.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Float.c; sourceTree = "<group>"; };
+		8B553ADA1C3BDD6700FB980A /* Inet4Address.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Inet4Address.c; sourceTree = "<group>"; };
+		8B553ADB1C3BDD6700FB980A /* Inet4AddressImpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Inet4AddressImpl.c; sourceTree = "<group>"; };
+		8B553ADC1C3BDD6700FB980A /* Inet6Address.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Inet6Address.c; sourceTree = "<group>"; };
+		8B553ADD1C3BDD6700FB980A /* Inet6AddressImpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Inet6AddressImpl.c; sourceTree = "<group>"; };
+		8B553ADE1C3BDD6700FB980A /* InetAddress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = InetAddress.c; sourceTree = "<group>"; };
+		8B553ADF1C3BDD6700FB980A /* InheritedChannel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = InheritedChannel.c; sourceTree = "<group>"; };
+		8B553AE01C3BDD6700FB980A /* io_util_md.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io_util_md.c; sourceTree = "<group>"; };
+		8B553AE11C3BDD6700FB980A /* io_util_md.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = io_util_md.h; sourceTree = "<group>"; };
+		8B553AE21C3BDD6700FB980A /* io_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io_util.c; sourceTree = "<group>"; };
+		8B553AE31C3BDD6700FB980A /* io_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = io_util.h; sourceTree = "<group>"; };
+		8B553AE41C3BDD6700FB980A /* IOUtil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IOUtil.c; sourceTree = "<group>"; };
+		8B553AE51C3BDD6700FB980A /* java_io_FileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_io_FileSystem.h; sourceTree = "<group>"; };
+		8B553AE61C3BDD6700FB980A /* java_io_UnixFileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_io_UnixFileSystem.h; sourceTree = "<group>"; };
+		8B553AE71C3BDD6700FB980A /* java_lang_Integer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_lang_Integer.h; sourceTree = "<group>"; };
+		8B553AE81C3BDD6700FB980A /* java_lang_Long.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_lang_Long.h; sourceTree = "<group>"; };
+		8B553AE91C3BDD6700FB980A /* java_net_Inet4AddressImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_net_Inet4AddressImpl.h; sourceTree = "<group>"; };
+		8B553AEA1C3BDD6700FB980A /* java_net_NetworkInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_net_NetworkInterface.h; sourceTree = "<group>"; };
+		8B553AEB1C3BDD6700FB980A /* java_net_PlainDatagramSocketImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_net_PlainDatagramSocketImpl.h; sourceTree = "<group>"; };
+		8B553AEC1C3BDD6700FB980A /* java_net_PlainSocketImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_net_PlainSocketImpl.h; sourceTree = "<group>"; };
+		8B553AED1C3BDD6700FB980A /* java_net_SocketOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_net_SocketOptions.h; sourceTree = "<group>"; };
+		8B553AEE1C3BDD6700FB980A /* java_props_md.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = java_props_md.c; sourceTree = "<group>"; };
+		8B553AEF1C3BDD6700FB980A /* java_util_zip_CRC32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = java_util_zip_CRC32.c; sourceTree = "<group>"; };
+		8B553AF01C3BDD6700FB980A /* java_util_zip_Deflater.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = java_util_zip_Deflater.c; sourceTree = "<group>"; };
+		8B553AF11C3BDD6700FB980A /* java_util_zip_Inflater.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = java_util_zip_Inflater.c; sourceTree = "<group>"; };
+		8B553AF21C3BDD6700FB980A /* java_util_zip_ZipFile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = java_util_zip_ZipFile.c; sourceTree = "<group>"; };
+		8B553AF31C3BDD6700FB980A /* java_util_zip_ZipFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_util_zip_ZipFile.h; sourceTree = "<group>"; };
+		8B553AF41C3BDD6700FB980A /* jfdlibm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jfdlibm.h; sourceTree = "<group>"; };
+		8B553AF51C3BDD6700FB980A /* jlong_md.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jlong_md.h; sourceTree = "<group>"; };
+		8B553AF61C3BDD6700FB980A /* jlong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jlong.h; sourceTree = "<group>"; };
+		8B553AF71C3BDD6700FB980A /* jni_util_md.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jni_util_md.c; sourceTree = "<group>"; };
+		8B553AF81C3BDD6700FB980A /* jni_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jni_util.c; sourceTree = "<group>"; };
+		8B553AF91C3BDD6700FB980A /* jni_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jni_util.h; sourceTree = "<group>"; };
+		8B553AFA1C3BDD6700FB980A /* jvm_md.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jvm_md.h; sourceTree = "<group>"; };
+		8B553AFB1C3BDD6700FB980A /* jvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jvm.h; sourceTree = "<group>"; };
+		8B553AFC1C3BDD6700FB980A /* linux_close.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = linux_close.cpp; sourceTree = "<group>"; };
+		8B553AFD1C3BDD6700FB980A /* MappedByteBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MappedByteBuffer.c; sourceTree = "<group>"; };
+		8B553AFE1C3BDD6700FB980A /* Math.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Math.c; sourceTree = "<group>"; };
+		8B553AFF1C3BDD6700FB980A /* NativeThread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NativeThread.c; sourceTree = "<group>"; };
+		8B553B001C3BDD6700FB980A /* net_util_md.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = net_util_md.c; sourceTree = "<group>"; };
+		8B553B011C3BDD6700FB980A /* net_util_md.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = net_util_md.h; sourceTree = "<group>"; };
+		8B553B021C3BDD6700FB980A /* net_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = net_util.c; sourceTree = "<group>"; };
+		8B553B031C3BDD6700FB980A /* net_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = net_util.h; sourceTree = "<group>"; };
+		8B553B041C3BDD6700FB980A /* Net.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Net.c; sourceTree = "<group>"; };
+		8B553B051C3BDD6700FB980A /* NetworkInterface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NetworkInterface.c; sourceTree = "<group>"; };
+		8B553B061C3BDD6700FB980A /* nio_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nio_util.h; sourceTree = "<group>"; };
+		8B553B071C3BDD6700FB980A /* nio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nio.h; sourceTree = "<group>"; };
+		8B553B081C3BDD6700FB980A /* ObjectInputStream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ObjectInputStream.c; sourceTree = "<group>"; };
+		8B553B091C3BDD6700FB980A /* ObjectOutputStream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ObjectOutputStream.c; sourceTree = "<group>"; };
+		8B553B0A1C3BDD6700FB980A /* ObjectStreamClass.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ObjectStreamClass.c; sourceTree = "<group>"; };
+		8B553B0B1C3BDD6700FB980A /* openjdksub.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = openjdksub.mk; sourceTree = "<group>"; };
+		8B553B0C1C3BDD6700FB980A /* PlainDatagramSocketImpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PlainDatagramSocketImpl.c; sourceTree = "<group>"; };
+		8B553B0D1C3BDD6700FB980A /* PlainSocketImpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PlainSocketImpl.c; sourceTree = "<group>"; };
+		8B553B0E1C3BDD6700FB980A /* ProcessEnvironment_md.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ProcessEnvironment_md.c; sourceTree = "<group>"; };
+		8B553B0F1C3BDD6700FB980A /* Register.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Register.cpp; sourceTree = "<group>"; };
+		8B553B101C3BDD6700FB980A /* Runtime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Runtime.c; sourceTree = "<group>"; };
+		8B553B111C3BDD6700FB980A /* ServerSocketChannelImpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ServerSocketChannelImpl.c; sourceTree = "<group>"; };
+		8B553B121C3BDD6700FB980A /* Shutdown.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Shutdown.c; sourceTree = "<group>"; };
+		8B553B131C3BDD6700FB980A /* SocketChannelImpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SocketChannelImpl.c; sourceTree = "<group>"; };
+		8B553B141C3BDD6700FB980A /* SocketInputStream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SocketInputStream.c; sourceTree = "<group>"; };
+		8B553B151C3BDD6700FB980A /* SocketOutputStream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SocketOutputStream.c; sourceTree = "<group>"; };
+		8B553B161C3BDD6700FB980A /* StrictMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = StrictMath.c; sourceTree = "<group>"; };
+		8B553B171C3BDD6700FB980A /* String.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = String.c; sourceTree = "<group>"; };
+		8B553B181C3BDD6700FB980A /* sun_nio_ch_FileChannelImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sun_nio_ch_FileChannelImpl.h; sourceTree = "<group>"; };
+		8B553B191C3BDD6700FB980A /* sun_nio_ch_FileDispatcherImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sun_nio_ch_FileDispatcherImpl.h; sourceTree = "<group>"; };
+		8B553B1A1C3BDD6700FB980A /* sun_nio_ch_InheritedChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sun_nio_ch_InheritedChannel.h; sourceTree = "<group>"; };
+		8B553B1B1C3BDD6700FB980A /* sun_nio_ch_IOStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sun_nio_ch_IOStatus.h; sourceTree = "<group>"; };
+		8B553B1C1C3BDD6700FB980A /* sun_nio_ch_Net.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sun_nio_ch_Net.h; sourceTree = "<group>"; };
+		8B553B1D1C3BDD6700FB980A /* sun_nio_ch_ServerSocketChannelImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sun_nio_ch_ServerSocketChannelImpl.h; sourceTree = "<group>"; };
+		8B553B1E1C3BDD6700FB980A /* System.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = System.c; sourceTree = "<group>"; };
+		8B553B1F1C3BDD6700FB980A /* Thread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Thread.c; sourceTree = "<group>"; };
+		8B553B201C3BDD6700FB980A /* Throwable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Throwable.c; sourceTree = "<group>"; };
+		8B553B211C3BDD6700FB980A /* UnixFileSystem_md.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UnixFileSystem_md.c; sourceTree = "<group>"; };
+		8B553B221C3BDD6700FB980A /* UNIXProcess_md.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UNIXProcess_md.c; sourceTree = "<group>"; };
+		8B553B231C3BDD6700FB980A /* zip_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip_util.c; sourceTree = "<group>"; };
+		8B553B241C3BDD6700FB980A /* zip_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip_util.h; sourceTree = "<group>"; };
+		8BF4A85A1D07000A0088404B /* libcore_util_NativeAllocationRegistry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = libcore_util_NativeAllocationRegistry.cpp; sourceTree = "<group>"; };
+		8BF4A85C1D07005D0088404B /* socket_tagger_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = socket_tagger_util.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +265,7 @@
 		2353A63E17CE1AFD005CF3CC /* libcore */ = {
 			isa = PBXGroup;
 			children = (
+				8B553AC01C3BDD2000FB980A /* ojluni */,
 				D97203BC183C12B600078841 /* luni */,
 			);
 			path = libcore;
@@ -180,12 +294,8 @@
 		23F4CA9E18CDE13A00EF5181 /* native */ = {
 			isa = PBXGroup;
 			children = (
-				22FC53E71C19D6AE008CA804 /* libcore_icu_Transliterator.cpp */,
-				22E2867B1C175F0A003D515D /* libcore_icu_NativeCollation.cpp */,
 				57F1D9601B67600700E6FF2E /* java_net_NetworkInterface.cpp */,
 				238453F019E2C5B2000DFC86 /* android_system_OsConstants.cpp */,
-				238453F119E2C5B2000DFC86 /* AsynchronousCloseMonitor.cpp */,
-				238453F219E2C5B2000DFC86 /* AsynchronousCloseMonitor.h */,
 				238453F319E2C5B2000DFC86 /* canonicalize_path.cpp */,
 				238453F419E2C5B2000DFC86 /* cbigint.cpp */,
 				238453F519E2C5B2000DFC86 /* cbigint.h */,
@@ -193,36 +303,19 @@
 				238453F719E2C5B2000DFC86 /* ExecStrings.h */,
 				238453F819E2C5B2000DFC86 /* IcuUtilities.cpp */,
 				238453F919E2C5B2000DFC86 /* IcuUtilities.h */,
-				238453FA19E2C5B2000DFC86 /* java_io_File.cpp */,
-				238453FB19E2C5B2000DFC86 /* java_io_FileDescriptor.cpp */,
-				238453FC19E2C5B2000DFC86 /* java_io_ObjectStreamClass.cpp */,
-				238453FD19E2C5B2000DFC86 /* java_lang_Character.cpp */,
-				238453FE19E2C5B2000DFC86 /* java_lang_Double.cpp */,
-				238453FF19E2C5B2000DFC86 /* java_lang_Float.cpp */,
-				2384540019E2C5B2000DFC86 /* java_lang_Math.cpp */,
-				2384540119E2C5B2000DFC86 /* java_lang_ProcessManager.cpp */,
-				2384540219E2C5B2000DFC86 /* java_lang_RealToString.cpp */,
-				2384540319E2C5B2000DFC86 /* java_lang_StrictMath.cpp */,
 				2384540419E2C5B2000DFC86 /* java_lang_StringToReal.cpp */,
-				2384540519E2C5B2000DFC86 /* java_lang_System.cpp */,
 				2384540619E2C5B2000DFC86 /* java_math_NativeBN.cpp */,
-				2384540A19E2C5B2000DFC86 /* java_util_jar_StrictJarFile.cpp */,
 				2384540B19E2C5B2000DFC86 /* java_util_regex_Matcher.cpp */,
 				2384540C19E2C5B2000DFC86 /* java_util_regex_Pattern.cpp */,
-				2384540D19E2C5B2000DFC86 /* java_util_zip_Adler32.cpp */,
-				2384540E19E2C5B2000DFC86 /* java_util_zip_CRC32.cpp */,
-				2384540F19E2C5B2000DFC86 /* java_util_zip_Deflater.cpp */,
-				2384541019E2C5B2000DFC86 /* java_util_zip_Inflater.cpp */,
 				2384541119E2C5B2000DFC86 /* JniException.cpp */,
 				2384541219E2C5B2000DFC86 /* JniException.h */,
 				2384541519E2C5B2000DFC86 /* libcore_icu_ICU.cpp */,
-				22E286791C1751E4003D515D /* libcore_icu_NativeBreakIterator.cpp */,
 				2384541819E2C5B2000DFC86 /* libcore_icu_NativeConverter.cpp */,
-				2384541919E2C5B2000DFC86 /* libcore_icu_NativeDecimalFormat.cpp */,
 				2384541D19E2C5B2000DFC86 /* libcore_icu_TimeZoneNames.cpp */,
 				2384541F19E2C5B2000DFC86 /* libcore_io_AsynchronousCloseMonitor.cpp */,
 				2384542019E2C5B2000DFC86 /* libcore_io_Memory.cpp */,
 				2384542119E2C5B2000DFC86 /* libcore_io_Posix.cpp */,
+				8BF4A85A1D07000A0088404B /* libcore_util_NativeAllocationRegistry.cpp */,
 				2384542219E2C5B2000DFC86 /* NetFd.h */,
 				2384542319E2C5B2000DFC86 /* NetworkUtilities.cpp */,
 				2384542419E2C5B2000DFC86 /* NetworkUtilities.h */,
@@ -231,12 +324,138 @@
 				2384542719E2C5B2000DFC86 /* readlink.cpp */,
 				2384542819E2C5B2000DFC86 /* readlink.h */,
 				2384542919E2C5B2000DFC86 /* Register.cpp */,
-				2384542A19E2C5B2000DFC86 /* sub.mk */,
 				2384542B19E2C5B2000DFC86 /* sun_misc_Unsafe.cpp */,
 				2384542C19E2C5B2000DFC86 /* valueOf.cpp */,
 				2384542D19E2C5B2000DFC86 /* valueOf.h */,
 				2384542E19E2C5B2000DFC86 /* ZipUtilities.cpp */,
 				2384542F19E2C5B2000DFC86 /* ZipUtilities.h */,
+			);
+			path = native;
+			sourceTree = "<group>";
+		};
+		8B553AC01C3BDD2000FB980A /* ojluni */ = {
+			isa = PBXGroup;
+			children = (
+				8B553AC11C3BDD2F00FB980A /* src */,
+			);
+			path = ojluni;
+			sourceTree = "<group>";
+		};
+		8B553AC11C3BDD2F00FB980A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				8B553AC21C3BDD3400FB980A /* main */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		8B553AC21C3BDD3400FB980A /* main */ = {
+			isa = PBXGroup;
+			children = (
+				8B553AC31C3BDD3900FB980A /* native */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		8B553AC31C3BDD3900FB980A /* native */ = {
+			isa = PBXGroup;
+			children = (
+				8B553AC41C3BDD6700FB980A /* Adler32.c */,
+				8B553AC51C3BDD6700FB980A /* Bits.c */,
+				8B553AC61C3BDD6700FB980A /* canonicalize_md.c */,
+				8B553AC71C3BDD6700FB980A /* Character.cpp */,
+				8B553AC81C3BDD6700FB980A /* classfile_constants.h */,
+				8B553AC91C3BDD6700FB980A /* Console_md.c */,
+				8B553ACA1C3BDD6700FB980A /* DatagramChannelImpl.c */,
+				8B553ACB1C3BDD6700FB980A /* DatagramDispatcher.c */,
+				8B553ACC1C3BDD6700FB980A /* DatagramPacket.c */,
+				8B553ACE1C3BDD6700FB980A /* Double.c */,
+				8B553AD01C3BDD6700FB980A /* fdlibm.h */,
+				8B553AD11C3BDD6700FB980A /* FileChannelImpl.c */,
+				8B553AD21C3BDD6700FB980A /* FileDescriptor_md.c */,
+				8B553AD31C3BDD6700FB980A /* FileDispatcherImpl.c */,
+				8B553AD41C3BDD6700FB980A /* FileInputStream.c */,
+				8B553AD51C3BDD6700FB980A /* FileKey.c */,
+				8B553AD61C3BDD6700FB980A /* FileOutputStream_md.c */,
+				8B553AD71C3BDD6700FB980A /* FileSystem_md.c */,
+				8B553AD81C3BDD6700FB980A /* FileSystemPreferences.c */,
+				8B553AD91C3BDD6700FB980A /* Float.c */,
+				8B553ADA1C3BDD6700FB980A /* Inet4Address.c */,
+				8B553ADB1C3BDD6700FB980A /* Inet4AddressImpl.c */,
+				8B553ADC1C3BDD6700FB980A /* Inet6Address.c */,
+				8B553ADD1C3BDD6700FB980A /* Inet6AddressImpl.c */,
+				8B553ADE1C3BDD6700FB980A /* InetAddress.c */,
+				8B553ADF1C3BDD6700FB980A /* InheritedChannel.c */,
+				8B553AE01C3BDD6700FB980A /* io_util_md.c */,
+				8B553AE11C3BDD6700FB980A /* io_util_md.h */,
+				8B553AE21C3BDD6700FB980A /* io_util.c */,
+				8B553AE31C3BDD6700FB980A /* io_util.h */,
+				8B553AE41C3BDD6700FB980A /* IOUtil.c */,
+				8B553AE51C3BDD6700FB980A /* java_io_FileSystem.h */,
+				8B553AE61C3BDD6700FB980A /* java_io_UnixFileSystem.h */,
+				8B553AE71C3BDD6700FB980A /* java_lang_Integer.h */,
+				8B553AE81C3BDD6700FB980A /* java_lang_Long.h */,
+				8B553AE91C3BDD6700FB980A /* java_net_Inet4AddressImpl.h */,
+				8B553AEA1C3BDD6700FB980A /* java_net_NetworkInterface.h */,
+				8B553AEB1C3BDD6700FB980A /* java_net_PlainDatagramSocketImpl.h */,
+				8B553AEC1C3BDD6700FB980A /* java_net_PlainSocketImpl.h */,
+				8B553AED1C3BDD6700FB980A /* java_net_SocketOptions.h */,
+				8B553AEE1C3BDD6700FB980A /* java_props_md.c */,
+				8B553AEF1C3BDD6700FB980A /* java_util_zip_CRC32.c */,
+				8B553AF01C3BDD6700FB980A /* java_util_zip_Deflater.c */,
+				8B553AF11C3BDD6700FB980A /* java_util_zip_Inflater.c */,
+				8B553AF21C3BDD6700FB980A /* java_util_zip_ZipFile.c */,
+				8B553AF31C3BDD6700FB980A /* java_util_zip_ZipFile.h */,
+				8B553AF41C3BDD6700FB980A /* jfdlibm.h */,
+				8B553AF51C3BDD6700FB980A /* jlong_md.h */,
+				8B553AF61C3BDD6700FB980A /* jlong.h */,
+				8B553AF71C3BDD6700FB980A /* jni_util_md.c */,
+				8B553AF81C3BDD6700FB980A /* jni_util.c */,
+				8B553AF91C3BDD6700FB980A /* jni_util.h */,
+				8B553AFA1C3BDD6700FB980A /* jvm_md.h */,
+				8B553AFB1C3BDD6700FB980A /* jvm.h */,
+				8B553AFC1C3BDD6700FB980A /* linux_close.cpp */,
+				8B553AFD1C3BDD6700FB980A /* MappedByteBuffer.c */,
+				8B553AFE1C3BDD6700FB980A /* Math.c */,
+				8B553AFF1C3BDD6700FB980A /* NativeThread.c */,
+				8B553B001C3BDD6700FB980A /* net_util_md.c */,
+				8B553B011C3BDD6700FB980A /* net_util_md.h */,
+				8B553B021C3BDD6700FB980A /* net_util.c */,
+				8B553B031C3BDD6700FB980A /* net_util.h */,
+				8B553B041C3BDD6700FB980A /* Net.c */,
+				8B553B051C3BDD6700FB980A /* NetworkInterface.c */,
+				8B553B061C3BDD6700FB980A /* nio_util.h */,
+				8B553B071C3BDD6700FB980A /* nio.h */,
+				8B553B081C3BDD6700FB980A /* ObjectInputStream.c */,
+				8B553B091C3BDD6700FB980A /* ObjectOutputStream.c */,
+				8B553B0A1C3BDD6700FB980A /* ObjectStreamClass.c */,
+				8B553B0B1C3BDD6700FB980A /* openjdksub.mk */,
+				8B553B0C1C3BDD6700FB980A /* PlainDatagramSocketImpl.c */,
+				8B553B0D1C3BDD6700FB980A /* PlainSocketImpl.c */,
+				8B553B0E1C3BDD6700FB980A /* ProcessEnvironment_md.c */,
+				8B553B0F1C3BDD6700FB980A /* Register.cpp */,
+				8B553B101C3BDD6700FB980A /* Runtime.c */,
+				8B553B111C3BDD6700FB980A /* ServerSocketChannelImpl.c */,
+				8B553B121C3BDD6700FB980A /* Shutdown.c */,
+				8BF4A85C1D07005D0088404B /* socket_tagger_util.cpp */,
+				8B553B131C3BDD6700FB980A /* SocketChannelImpl.c */,
+				8B553B141C3BDD6700FB980A /* SocketInputStream.c */,
+				8B553B151C3BDD6700FB980A /* SocketOutputStream.c */,
+				8B553B161C3BDD6700FB980A /* StrictMath.c */,
+				8B553B171C3BDD6700FB980A /* String.c */,
+				8B553B181C3BDD6700FB980A /* sun_nio_ch_FileChannelImpl.h */,
+				8B553B191C3BDD6700FB980A /* sun_nio_ch_FileDispatcherImpl.h */,
+				8B553B1A1C3BDD6700FB980A /* sun_nio_ch_InheritedChannel.h */,
+				8B553B1B1C3BDD6700FB980A /* sun_nio_ch_IOStatus.h */,
+				8B553B1C1C3BDD6700FB980A /* sun_nio_ch_Net.h */,
+				8B553B1D1C3BDD6700FB980A /* sun_nio_ch_ServerSocketChannelImpl.h */,
+				8B553B1E1C3BDD6700FB980A /* System.c */,
+				8B553B1F1C3BDD6700FB980A /* Thread.c */,
+				8B553B201C3BDD6700FB980A /* Throwable.c */,
+				8B553B211C3BDD6700FB980A /* UnixFileSystem_md.c */,
+				8B553B221C3BDD6700FB980A /* UNIXProcess_md.c */,
+				8B553B231C3BDD6700FB980A /* zip_util.c */,
+				8B553B241C3BDD6700FB980A /* zip_util.h */,
 			);
 			path = native;
 			sourceTree = "<group>";
@@ -324,50 +543,89 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B553B2B1C3BDD6700FB980A /* DatagramDispatcher.c in Sources */,
+				8B553B5E1C3BDD6700FB980A /* StrictMath.c in Sources */,
+				8B553B591C3BDD6700FB980A /* ServerSocketChannelImpl.c in Sources */,
+				8B553B541C3BDD6700FB980A /* PlainDatagramSocketImpl.c in Sources */,
+				8B553B651C3BDD6700FB980A /* zip_util.c in Sources */,
+				8B553B571C3BDD6700FB980A /* Register.cpp in Sources */,
+				8B553B4D1C3BDD6700FB980A /* net_util_md.c in Sources */,
+				8B553B301C3BDD6700FB980A /* FileChannelImpl.c in Sources */,
 				2384546119E2C5B2000DFC86 /* libcore_io_Posix.cpp in Sources */,
-				2384545919E2C5B2000DFC86 /* libcore_icu_NativeDecimalFormat.cpp in Sources */,
+				8B553B251C3BDD6700FB980A /* Adler32.c in Sources */,
+				8B553B3E1C3BDD6700FB980A /* InheritedChannel.c in Sources */,
+				8B553B3B1C3BDD6700FB980A /* Inet6Address.c in Sources */,
 				2384544B19E2C5B2000DFC86 /* java_util_regex_Matcher.cpp in Sources */,
+				8B553B521C3BDD6700FB980A /* ObjectOutputStream.c in Sources */,
+				8B553B441C3BDD6700FB980A /* java_util_zip_Deflater.c in Sources */,
 				2384546919E2C5B2000DFC86 /* Register.cpp in Sources */,
+				8B553B4E1C3BDD6700FB980A /* net_util.c in Sources */,
+				8B553B561C3BDD6700FB980A /* ProcessEnvironment_md.c in Sources */,
 				2384546D19E2C5B2000DFC86 /* ZipUtilities.cpp in Sources */,
 				2384545119E2C5B2000DFC86 /* JniException.cpp in Sources */,
-				2384544219E2C5B2000DFC86 /* java_lang_RealToString.cpp in Sources */,
-				57F1D9611B67600700E6FF2E /* java_net_NetworkInterface.cpp in Sources */,
-				2384543F19E2C5B2000DFC86 /* java_lang_Float.cpp in Sources */,
-				2384544519E2C5B2000DFC86 /* java_lang_System.cpp in Sources */,
+				8B553B2A1C3BDD6700FB980A /* DatagramChannelImpl.c in Sources */,
 				2384545819E2C5B2000DFC86 /* libcore_icu_NativeConverter.cpp in Sources */,
+				8B553B3A1C3BDD6700FB980A /* Inet4AddressImpl.c in Sources */,
+				8B553B5A1C3BDD6700FB980A /* Shutdown.c in Sources */,
 				2384543419E2C5B2000DFC86 /* cbigint.cpp in Sources */,
+				8B553B3D1C3BDD6700FB980A /* InetAddress.c in Sources */,
 				2384543619E2C5B2000DFC86 /* ExecStrings.cpp in Sources */,
-				2384544D19E2C5B2000DFC86 /* java_util_zip_Adler32.cpp in Sources */,
 				2384545F19E2C5B2000DFC86 /* libcore_io_AsynchronousCloseMonitor.cpp in Sources */,
 				2384544619E2C5B2000DFC86 /* java_math_NativeBN.cpp in Sources */,
-				2384543C19E2C5B2000DFC86 /* java_io_ObjectStreamClass.cpp in Sources */,
+				8B553B3C1C3BDD6700FB980A /* Inet6AddressImpl.c in Sources */,
+				8B553B331C3BDD6700FB980A /* FileInputStream.c in Sources */,
+				8B553B5D1C3BDD6700FB980A /* SocketOutputStream.c in Sources */,
 				2384545519E2C5B2000DFC86 /* libcore_icu_ICU.cpp in Sources */,
+				8B553B601C3BDD6700FB980A /* System.c in Sources */,
+				8B553B641C3BDD6700FB980A /* UNIXProcess_md.c in Sources */,
+				8B553B261C3BDD6700FB980A /* Bits.c in Sources */,
+				8B553B461C3BDD6700FB980A /* java_util_zip_ZipFile.c in Sources */,
+				8B553B401C3BDD6700FB980A /* io_util.c in Sources */,
+				8B553B271C3BDD6700FB980A /* canonicalize_md.c in Sources */,
+				8B553B4A1C3BDD6700FB980A /* MappedByteBuffer.c in Sources */,
+				8B553B4C1C3BDD6700FB980A /* NativeThread.c in Sources */,
+				8B553B481C3BDD6700FB980A /* jni_util.c in Sources */,
+				8B553B501C3BDD6700FB980A /* NetworkInterface.c in Sources */,
 				2384546B19E2C5B2000DFC86 /* valueOf.cpp in Sources */,
-				22E2867A1C1751E4003D515D /* libcore_icu_NativeBreakIterator.cpp in Sources */,
+				8B553B491C3BDD6700FB980A /* linux_close.cpp in Sources */,
+				8B553B321C3BDD6700FB980A /* FileDispatcherImpl.c in Sources */,
 				2384544C19E2C5B2000DFC86 /* java_util_regex_Pattern.cpp in Sources */,
 				2384546A19E2C5B2000DFC86 /* sun_misc_Unsafe.cpp in Sources */,
-				2384543B19E2C5B2000DFC86 /* java_io_FileDescriptor.cpp in Sources */,
-				22E2867C1C175F0A003D515D /* libcore_icu_NativeCollation.cpp in Sources */,
 				2384544419E2C5B2000DFC86 /* java_lang_StringToReal.cpp in Sources */,
-				2384544A19E2C5B2000DFC86 /* java_util_jar_StrictJarFile.cpp in Sources */,
-				2384544019E2C5B2000DFC86 /* java_lang_Math.cpp in Sources */,
+				8B553B311C3BDD6700FB980A /* FileDescriptor_md.c in Sources */,
+				8B553B411C3BDD6700FB980A /* IOUtil.c in Sources */,
 				2384546319E2C5B2000DFC86 /* NetworkUtilities.cpp in Sources */,
+				8B553B531C3BDD6700FB980A /* ObjectStreamClass.c in Sources */,
+				8B553B361C3BDD6700FB980A /* FileSystem_md.c in Sources */,
 				2384543019E2C5B2000DFC86 /* android_system_OsConstants.cpp in Sources */,
+				8B553B5B1C3BDD6700FB980A /* SocketChannelImpl.c in Sources */,
+				8B553B351C3BDD6700FB980A /* FileOutputStream_md.c in Sources */,
 				2384545D19E2C5B2000DFC86 /* libcore_icu_TimeZoneNames.cpp in Sources */,
-				2384543D19E2C5B2000DFC86 /* java_lang_Character.cpp in Sources */,
-				2384544F19E2C5B2000DFC86 /* java_util_zip_Deflater.cpp in Sources */,
-				2384543119E2C5B2000DFC86 /* AsynchronousCloseMonitor.cpp in Sources */,
-				2384544E19E2C5B2000DFC86 /* java_util_zip_CRC32.cpp in Sources */,
-				2384545019E2C5B2000DFC86 /* java_util_zip_Inflater.cpp in Sources */,
 				2384546019E2C5B2000DFC86 /* libcore_io_Memory.cpp in Sources */,
+				8B553B5C1C3BDD6700FB980A /* SocketInputStream.c in Sources */,
+				8B553B471C3BDD6700FB980A /* jni_util_md.c in Sources */,
+				8B553B281C3BDD6700FB980A /* Character.cpp in Sources */,
+				8BF4A85D1D07005D0088404B /* socket_tagger_util.cpp in Sources */,
+				8B553B2C1C3BDD6700FB980A /* DatagramPacket.c in Sources */,
+				8B553B451C3BDD6700FB980A /* java_util_zip_Inflater.c in Sources */,
+				8B553B381C3BDD6700FB980A /* Float.c in Sources */,
 				2384546519E2C5B2000DFC86 /* org_apache_harmony_xml_ExpatParser.cpp in Sources */,
 				2384546719E2C5B2000DFC86 /* readlink.cpp in Sources */,
-				22FC53E81C19D6AE008CA804 /* libcore_icu_Transliterator.cpp in Sources */,
-				2384544119E2C5B2000DFC86 /* java_lang_ProcessManager.cpp in Sources */,
+				8B553B291C3BDD6700FB980A /* Console_md.c in Sources */,
+				8B553B431C3BDD6700FB980A /* java_util_zip_CRC32.c in Sources */,
+				8B553B391C3BDD6700FB980A /* Inet4Address.c in Sources */,
+				8B553B341C3BDD6700FB980A /* FileKey.c in Sources */,
+				8B553B6B1C3C026C00FB980A /* UnixFileSystem_md.c in Sources */,
+				8B553B511C3BDD6700FB980A /* ObjectInputStream.c in Sources */,
+				8B553B3F1C3BDD6700FB980A /* io_util_md.c in Sources */,
+				8B553B2E1C3BDD6700FB980A /* Double.c in Sources */,
+				8B553B371C3BDD6700FB980A /* FileSystemPreferences.c in Sources */,
+				8BF4A85B1D07000A0088404B /* libcore_util_NativeAllocationRegistry.cpp in Sources */,
+				8B553B4B1C3BDD6700FB980A /* Math.c in Sources */,
+				8B553B551C3BDD6700FB980A /* PlainSocketImpl.c in Sources */,
 				2384543819E2C5B2000DFC86 /* IcuUtilities.cpp in Sources */,
-				2384543E19E2C5B2000DFC86 /* java_lang_Double.cpp in Sources */,
-				2384543A19E2C5B2000DFC86 /* java_io_File.cpp in Sources */,
-				2384544319E2C5B2000DFC86 /* java_lang_StrictMath.cpp in Sources */,
+				8B553B4F1C3BDD6700FB980A /* Net.c in Sources */,
+				8B553B581C3BDD6700FB980A /* Runtime.c in Sources */,
 				2384543319E2C5B2000DFC86 /* canonicalize_path.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,7 +637,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
@@ -394,6 +651,8 @@
 					"MOE=1",
 					HAVE_LITTLE_ENDIAN,
 					"DEBUG=1",
+					XML_STATIC,
+					U_STATIC_IMPLEMENTATION,
 				);
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -418,7 +677,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				DEAD_CODE_STRIPPING = YES;
@@ -432,6 +690,8 @@
 					"MOE=1",
 					HAVE_LITTLE_ENDIAN,
 					NDEBUG,
+					XML_STATIC,
+					U_STATIC_IMPLEMENTATION,
 				);
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -471,16 +731,17 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"$(ANDROID_ROOT)/libcore/luni/src/main/native\"",
-					"\"$(ANDROID_ROOT)/external/icu/icucf\"",
-					"\"$(ANDROID_ROOT)/external/icu/icu4c/source/common\"",
-					"\"$(ANDROID_ROOT)/external/icu/icu4c/source/i18n\"",
-					"\"$(ANDROID_ROOT)/external/openssl/include\"",
-					"\"$(ANDROID_ROOT)/external/zlib\"",
-					"\"$(ANDROID_ROOT)/libnativehelper/include/nativehelper\"",
-					"\"$(ANDROID_ROOT)/libcore/include\"",
-					"\"$(ANDROID_ROOT)/system/core/include\"",
-					"\"$(ANDROID_ROOT)/external/expat/lib\"",
+					"\"$(SRCROOT)/../../../../../aosp/libcore/luni/src/main/native\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/icu/icucf\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/icu/icu4c/source/common\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/icu/icu4c/source/i18n\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/zlib\"",
+					"\"$(SRCROOT)/../../../../../aosp/libnativehelper/include/nativehelper\"",
+					"\"$(SRCROOT)/../../../../../aosp/libcore/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/system/core/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/expat/lib\"",
+					../moe.base/src/main/native,
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -506,16 +767,17 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"$(ANDROID_ROOT)/libcore/luni/src/main/native\"",
-					"\"$(ANDROID_ROOT)/external/icu/icucf\"",
-					"\"$(ANDROID_ROOT)/external/icu/icu4c/source/common\"",
-					"\"$(ANDROID_ROOT)/external/icu/icu4c/source/i18n\"",
-					"\"$(ANDROID_ROOT)/external/openssl/include\"",
-					"\"$(ANDROID_ROOT)/external/zlib\"",
-					"\"$(ANDROID_ROOT)/libnativehelper/include/nativehelper\"",
-					"\"$(ANDROID_ROOT)/libcore/include\"",
-					"\"$(ANDROID_ROOT)/system/core/include\"",
-					"\"$(ANDROID_ROOT)/external/expat/lib\"",
+					"\"$(SRCROOT)/../../../../../aosp/libcore/luni/src/main/native\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/icu/icucf\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/icu/icu4c/source/common\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/icu/icu4c/source/i18n\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/zlib\"",
+					"\"$(SRCROOT)/../../../../../aosp/libnativehelper/include/nativehelper\"",
+					"\"$(SRCROOT)/../../../../../aosp/libcore/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/system/core/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/expat/lib\"",
+					../moe.base/src/main/native,
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";

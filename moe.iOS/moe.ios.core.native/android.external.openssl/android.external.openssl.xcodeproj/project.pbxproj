@@ -2683,7 +2683,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
@@ -2697,6 +2696,7 @@
 					"MOE=1",
 					HAVE_LITTLE_ENDIAN,
 					"DEBUG=1",
+					OPENSSL_NO_ASM,
 				);
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2721,7 +2721,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				DEAD_CODE_STRIPPING = YES;
@@ -2734,6 +2733,7 @@
 					"MOE=1",
 					HAVE_LITTLE_ENDIAN,
 					NDEBUG,
+					OPENSSL_NO_ASM,
 				);
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2773,13 +2773,14 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"$(ANDROID_ROOT)/external/openssl\"",
-					"\"$(ANDROID_ROOT)/external/openssl/crypto\"",
-					"\"$(ANDROID_ROOT)/external/openssl/crypto/asn1\"",
-					"\"$(ANDROID_ROOT)/external/openssl/crypto/evp\"",
-					"\"$(ANDROID_ROOT)/external/openssl/crypto/modes\"",
-					"\"$(ANDROID_ROOT)/external/openssl/include\"",
-					"\"$(ANDROID_ROOT)/external/openssl/include/openssl\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/crypto\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/crypto/asn1\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/crypto/evp\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/crypto/modes\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/include/openssl\"",
+					../moe.base/src/main/native,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2804,13 +2805,14 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"$(ANDROID_ROOT)/external/openssl\"",
-					"\"$(ANDROID_ROOT)/external/openssl/crypto\"",
-					"\"$(ANDROID_ROOT)/external/openssl/crypto/asn1\"",
-					"\"$(ANDROID_ROOT)/external/openssl/crypto/evp\"",
-					"\"$(ANDROID_ROOT)/external/openssl/crypto/modes\"",
-					"\"$(ANDROID_ROOT)/external/openssl/include\"",
-					"\"$(ANDROID_ROOT)/external/openssl/include/openssl\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/crypto\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/crypto/asn1\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/crypto/evp\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/crypto/modes\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/openssl/include/openssl\"",
+					../moe.base/src/main/native,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Copyright (C) 2014 Intel Corporation
+# Copyright (c) 2014-2016, Intel Corporation
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -56,12 +56,10 @@ ART_PATH="$ANDROID_WORKSPACE_PATH/art"
 GEN_SCRIPT="$ART_PATH/tools/generate-operator-out.py"
 
 # THESE VALUES ARE FROM runtime/Android.mk
-LIBART_ENUM_OPERATOR_OUT_HEADER_FILES="image.h gc/weak_root_state.h dex_instruction_utils.h base/unix_file/fd_file.h profiler_options.h gc_root.h debugger.h instrumentation.h gc/allocator_type.h stack.h gc/allocator/rosalloc.h gc/collector_type.h base/mutex.h dex_file.h dex_instruction.h gc/collector/gc_type.h gc/space/space.h gc/heap.h indirect_reference_table.h arch/instruction_set.h invoke_type.h jdwp/jdwp.h jdwp/jdwp_constants.h lock_word.h mirror/class.h oat.h quick/inline_method_analyser.h thread.h thread_state.h verifier/method_verifier.h"
+LIBART_ENUM_OPERATOR_OUT_HEADER_FILES="gc/weak_root_state.h dex_instruction_utils.h base/unix_file/fd_file.h profiler_options.h gc_root.h debugger.h instrumentation.h gc/allocator_type.h stack.h gc/allocator/rosalloc.h gc/collector_type.h base/mutex.h dex_file.h dex_instruction.h gc/collector/gc_type.h gc/space/space.h gc/heap.h indirect_reference_table.h arch/instruction_set.h invoke_type.h jdwp/jdwp.h jdwp/jdwp_constants.h lock_word.h mirror/class.h quick/inline_method_analyser.h thread.h thread_state.h verifier/method_verifier.h"
 
 # THESE VALUES ARE FROM compiler/Android.mk
-LIBART_COMPILER_COMMON_ENUM_OPERATOR_OUT_HEADER_FILES="image_writer.h driver/compiler_driver.h dex/global_value_numbering.h dex/quick/resource_mask.h dex/pass_me.h dex/compiler_enums.h optimizing/locations.h driver/compiler_options.h"
-LIBART_COMPILER_ARM_ENUM_OPERATOR_OUT_HEADER_FILES="utils/arm/constants_arm.h dex/quick/arm/arm_lir.h"
-LIBART_COMPILER_ARM64_ENUM_OPERATOR_OUT_HEADER_FILES="dex/quick/arm64/arm64_lir.h"
+LIBART_COMPILER_COMMON_ENUM_OPERATOR_OUT_HEADER_FILES="driver/compiler_driver.h dex/dex_to_dex_compiler.h dex/compiler_enums.h optimizing/locations.h driver/compiler_options.h"
 
 function generate {
     echo "Generating $1 to $2..."
@@ -100,5 +98,3 @@ function generate {
 
 generate runtime "../android.art.runtime/src/main/native" "$LIBART_ENUM_OPERATOR_OUT_HEADER_FILES" runtime
 generate compiler "../android.art.compiler/src/main/native" "$LIBART_COMPILER_COMMON_ENUM_OPERATOR_OUT_HEADER_FILES" compiler_common
-generate compiler "../android.art.compiler/src/main/native" "$LIBART_COMPILER_ARM_ENUM_OPERATOR_OUT_HEADER_FILES" compiler_arm
-generate compiler "../android.art.compiler/src/main/native" "$LIBART_COMPILER_ARM64_ENUM_OPERATOR_OUT_HEADER_FILES" compiler_arm64

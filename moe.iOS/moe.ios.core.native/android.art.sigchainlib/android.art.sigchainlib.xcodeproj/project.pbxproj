@@ -146,7 +146,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -185,7 +184,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -237,17 +235,17 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"$(ANDROID_ROOT)/system/core/include\"",
-					"\"$(ANDROID_ROOT)/external/gtest/include\"",
-					"\"$(ANDROID_ROOT)/art/runtime\"",
-					"\"$(ANDROID_ROOT)/libnativehelper/include/nativehelper\"",
-					"\"$(ANDROID_ROOT)/external/llvm/include\"",
-					"\"$(ANDROID_ROOT)/external/valgrind/main/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/system/core/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/gtest/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/art/runtime\"",
+					"\"$(SRCROOT)/../../../../../aosp/libnativehelper/include/nativehelper\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/llvm/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/valgrind/main/include\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "\"$(ANDROID_ROOT)/art\" \"$(ANDROID_ROOT)/art/compiler\" \"$(ANDROID_ROOT)/art/sigchainlib\" \"$(SRCROOT)/../../../../..\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../aosp/art\" \"$(SRCROOT)/../../../../../aosp/art/compiler\" \"$(SRCROOT)/../../../../../aosp/art/sigchainlib\" \"$(SRCROOT)/../../../../..\"";
 			};
 			name = Debug;
 		};
@@ -268,17 +266,17 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"$(ANDROID_ROOT)/system/core/include\"",
-					"\"$(ANDROID_ROOT)/external/gtest/include\"",
-					"\"$(ANDROID_ROOT)/art/runtime\"",
-					"\"$(ANDROID_ROOT)/libnativehelper/include/nativehelper\"",
-					"\"$(ANDROID_ROOT)/external/llvm/include\"",
-					"\"$(ANDROID_ROOT)/external/valgrind/main/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/system/core/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/gtest/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/art/runtime\"",
+					"\"$(SRCROOT)/../../../../../aosp/libnativehelper/include/nativehelper\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/llvm/include\"",
+					"\"$(SRCROOT)/../../../../../aosp/external/valgrind/main/include\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "\"$(ANDROID_ROOT)/art\" \"$(ANDROID_ROOT)/art/compiler\" \"$(ANDROID_ROOT)/art/sigchainlib\" \"$(SRCROOT)/../../../../..\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../aosp/art\" \"$(SRCROOT)/../../../../../aosp/art/compiler\" \"$(SRCROOT)/../../../../../aosp/art/sigchainlib\" \"$(SRCROOT)/../../../../..\"";
 			};
 			name = Release;
 		};

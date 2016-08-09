@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B48F5571D084BF600E66BC3 /* logger_write.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B48F5561D084BF600E66BC3 /* logger_write.c */; };
+		8B48F55A1D08534200E66BC3 /* config_write.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B48F5581D08534200E66BC3 /* config_write.c */; };
+		8B48F55C1D08537B00E66BC3 /* logger_lock.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B48F55B1D08537B00E66BC3 /* logger_lock.c */; };
+		8B48F5641D085A8D00E66BC3 /* fake_writer.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B48F5631D085A8D00E66BC3 /* fake_writer.c */; };
+		8B48F5681D08627C00E66BC3 /* logger_name.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B48F5671D08627C00E66BC3 /* logger_name.c */; };
 		D94FEE68183AABEB00589FCA /* event_tag_map.c in Sources */ = {isa = PBXBuildFile; fileRef = D94FEE63183AABEB00589FCA /* event_tag_map.c */; };
 		D94FEE69183AABEB00589FCA /* fake_log_device.c in Sources */ = {isa = PBXBuildFile; fileRef = D94FEE64183AABEB00589FCA /* fake_log_device.c */; };
-		D94FEE6A183AABEB00589FCA /* logd_write.c in Sources */ = {isa = PBXBuildFile; fileRef = D94FEE65183AABEB00589FCA /* logd_write.c */; };
-		D94FEE6B183AABEB00589FCA /* logprint.c in Sources */ = {isa = PBXBuildFile; fileRef = D94FEE66183AABEB00589FCA /* logprint.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,10 +22,15 @@
 		2395DA6E1877109700950DD5 /* MOE-Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MOE-Common.h"; sourceTree = "<group>"; };
 		239B361E19E2CD2400BECDFA /* fake_log_device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fake_log_device.h; sourceTree = "<group>"; };
 		23A22F70187594F00060BF79 /* MOE-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MOE-Prefix.pch"; sourceTree = "<group>"; };
+		8B48F5561D084BF600E66BC3 /* logger_write.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = logger_write.c; sourceTree = "<group>"; };
+		8B48F5581D08534200E66BC3 /* config_write.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = config_write.c; sourceTree = "<group>"; };
+		8B48F5591D08534200E66BC3 /* config_write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config_write.h; sourceTree = "<group>"; };
+		8B48F55B1D08537B00E66BC3 /* logger_lock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = logger_lock.c; sourceTree = "<group>"; };
+		8B48F5631D085A8D00E66BC3 /* fake_writer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fake_writer.c; sourceTree = "<group>"; };
+		8B48F5661D085CC700E66BC3 /* LibLog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LibLog-Prefix.pch"; sourceTree = "<group>"; };
+		8B48F5671D08627C00E66BC3 /* logger_name.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = logger_name.c; sourceTree = "<group>"; };
 		D94FEE63183AABEB00589FCA /* event_tag_map.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = event_tag_map.c; sourceTree = "<group>"; };
 		D94FEE64183AABEB00589FCA /* fake_log_device.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fake_log_device.c; sourceTree = "<group>"; };
-		D94FEE65183AABEB00589FCA /* logd_write.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = logd_write.c; sourceTree = "<group>"; };
-		D94FEE66183AABEB00589FCA /* logprint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = logprint.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				D9A0F132183A94F500523C62 /* Android Root */,
+				8B48F5651D085C7E00E66BC3 /* Supporting Files */,
 				2353A83917CE26CD005CF3CC /* Common Configuration */,
 				2353A5FA17CE1AD7005CF3CC /* Products */,
 			);
@@ -60,8 +69,12 @@
 				239B361E19E2CD2400BECDFA /* fake_log_device.h */,
 				D94FEE63183AABEB00589FCA /* event_tag_map.c */,
 				D94FEE64183AABEB00589FCA /* fake_log_device.c */,
-				D94FEE65183AABEB00589FCA /* logd_write.c */,
-				D94FEE66183AABEB00589FCA /* logprint.c */,
+				8B48F55B1D08537B00E66BC3 /* logger_lock.c */,
+				8B48F5671D08627C00E66BC3 /* logger_name.c */,
+				8B48F5561D084BF600E66BC3 /* logger_write.c */,
+				8B48F5581D08534200E66BC3 /* config_write.c */,
+				8B48F5591D08534200E66BC3 /* config_write.h */,
+				8B48F5631D085A8D00E66BC3 /* fake_writer.c */,
 			);
 			path = liblog;
 			sourceTree = "<group>";
@@ -91,6 +104,15 @@
 				2353A5FE17CE1AD7005CF3CC /* liblog */,
 			);
 			path = core;
+			sourceTree = "<group>";
+		};
+		8B48F5651D085C7E00E66BC3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B48F5661D085CC700E66BC3 /* LibLog-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = src/main/native;
 			sourceTree = "<group>";
 		};
 		D9A0F132183A94F500523C62 /* Android Root */ = {
@@ -152,10 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B48F5571D084BF600E66BC3 /* logger_write.c in Sources */,
 				D94FEE68183AABEB00589FCA /* event_tag_map.c in Sources */,
-				D94FEE6A183AABEB00589FCA /* logd_write.c in Sources */,
-				D94FEE6B183AABEB00589FCA /* logprint.c in Sources */,
 				D94FEE69183AABEB00589FCA /* fake_log_device.c in Sources */,
+				8B48F55A1D08534200E66BC3 /* config_write.c in Sources */,
+				8B48F5681D08627C00E66BC3 /* logger_name.c in Sources */,
+				8B48F55C1D08537B00E66BC3 /* logger_lock.c in Sources */,
+				8B48F5641D085A8D00E66BC3 /* fake_writer.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +191,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -181,6 +205,7 @@
 					"MOE=1",
 					HAVE_LITTLE_ENDIAN,
 					"DEBUG=1",
+					"FAKE_LOG_DEVICE=1",
 				);
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -205,7 +230,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ANDROID_ROOT = "$(SRCROOT)/../../../../../aosp";
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -219,6 +243,7 @@
 					"MOE=1",
 					HAVE_LITTLE_ENDIAN,
 					NDEBUG,
+					"FAKE_LOG_DEVICE=1",
 				);
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -253,10 +278,10 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/../moe.base/src/main/native/MOE-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/src/main/native/LibLog-Prefix.pch";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				HEADER_SEARCH_PATHS = "\"$(ANDROID_ROOT)/system/core/include\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../aosp/system/core/include\"";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -276,10 +301,10 @@
 				DSTROOT = /tmp/liblog.dst;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/../moe.base/src/main/native/MOE-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/src/main/native/LibLog-Prefix.pch";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				HEADER_SEARCH_PATHS = "\"$(ANDROID_ROOT)/system/core/include\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../aosp/system/core/include\"";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
