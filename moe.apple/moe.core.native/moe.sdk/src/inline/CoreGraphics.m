@@ -14,7 +14,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+#if __has_include(<CoreFoundation/CFCGTypes.h>)
 #import <CoreFoundation/CFCGTypes.h>
+#else
+#import <CoreGraphics/CGBase.h>
+#import <CoreGraphics/CGGeometry.h>
+#endif
+
 #import <CoreGraphics/CGAffineTransform.h>
 #import <CoreGraphics/CGGeometry.h>
 
