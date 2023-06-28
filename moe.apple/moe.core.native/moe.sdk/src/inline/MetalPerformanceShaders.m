@@ -7,12 +7,6 @@
 
 #define EXPORT extern __attribute__ ((visibility ("default")))
 
-#if __API_AVAILABLE(ios(16.1))
-EXPORT size_t __natj_inline_MPSSizeofMPSDataType(MPSDataType t) {
-	return MPSSizeofMPSDataType(t);
-}
-#endif
-
 EXPORT MPSIntegerDivisionParams __natj_inline_MPSFindIntegerDivisionParams(uint16_t divisor) {
 	return MPSFindIntegerDivisionParams(divisor);
 }
